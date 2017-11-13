@@ -1,0 +1,79 @@
+<style>
+<!--
+.title{cursor: pointer; text-align: left;}
+
+.board_title{
+	font-size: 12px;
+	height: 40px;
+	line-height: 24px;
+    font-weight: normal;
+    text-align: center;
+    color: #999;
+    border: 1px solid #ffffff;
+	align: center
+}
+.textSize{
+	font-size: 12px;
+	height: 40px;
+	line-height: 24px;
+    font-weight: normal;
+    text-align: center;
+    color: #fff;
+    background: #000000;
+    border: 1px solid #ffffff;
+	align: center
+
+}
+
+body{
+  font-family: '³ª´®¹Ù¸¥°íµñ';
+  color: #444;
+  font-size: 12px;
+  background: #f5f5f5;
+}
+.searchBtn{
+    height: 34px;
+    width: 38px;
+    color: #000 ;
+    line-height: 20px;
+    padding: 1px 6px;
+    background: #fff;
+    border: 1px solid #bdc3c7;
+    border-radius: 50%;
+    z-index: 1;
+}
+.boardFrom{
+    background: #fff;
+    min-height: 800px;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+.mainTable{
+width: 100%;
+}
+
+.deleteButton{
+height: 35px;
+    width: 100px;
+    color: #fff;
+    background: #000000;
+    border: 1px solid #ffffff;
+    border-radius: 0;
+    cursor: pointer;
+    display: none;
+}	
+.Button{
+    height: 35px;
+    width: 100px;
+    color: #fff;
+    background: #000000;
+    border: 1px solid #ffffff;
+    border-radius: 0;
+    cursor: pointer;
+}
+.title_td{
+	width:60%;
+}
+-->
+</style>
