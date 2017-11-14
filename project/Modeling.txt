@@ -1,0 +1,55 @@
+최신 소식(게시판)
+	-no
+	-writer_id
+	-subject
+	-contents
+	-write_date
+	-hit
+	-like
+하이라이트(게시판)
+	-no
+	-writer_id
+	-subject
+	-contents
+	-write_date
+	-hit
+	-like
+일정ㆍ결과(date_result)
+	-(player)//no,name,photo
+순위ㆍ기록(rank_record)
+	-(player)
+
+자유게시판(board)
+	-no
+	-writer_id
+	-subject
+	-contents
+	-write_date
+	-hit
+	-like
+회원정보(member)
+	-no
+	-email(인증,아이디로사용)
+	-pw
+	-nickname
+---------------------------------------
+	-가입일자(regist_date)
+	-최근방문일(recent_visit_date)
+	-방문횟수(visit_num)
+	-프사(photo)
+	-레벨/포인트
+---------------------------------------
+	-네이버로로그인
+선수정보(player)
+	-no
+	-name
+	-weight
+	-photo
+	-win
+	-draw
+	-lose
+	-last5
+	-last4
+	-last3
+	-last2
+	-last1
