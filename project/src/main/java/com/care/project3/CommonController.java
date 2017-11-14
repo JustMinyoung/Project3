@@ -8,13 +8,13 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
- * Handles requests for the application home page.
+ * test1
  */
 @Controller
 public class CommonController {
-	
+
 	private static final Logger logger = LoggerFactory.getLogger(CommonController.class);
-	
+
 	/**
 	 * Simply selects the home view to render by returning its name.
 	 */
@@ -22,27 +22,31 @@ public class CommonController {
 	public String index() {
 		return "redirect:home";
 	}
+
 	@RequestMapping(value = "/board")
 	public String board() {
 		return "form/board";
-		}
-	
+	}
+
 	@RequestMapping(value = "/{formPath}")
-	public String indexForm(
-			@PathVariable("formPath") String formPath,
-			Model model) {
+	public String indexForm(@PathVariable("formPath") String formPath, Model model) {
 		model.addAttribute("formPath", formPath);
 		return "index";
 	}
+
 	@RequestMapping(value = "/form/{formPath}")
-	public String moveForm(
-			@PathVariable("formPath") String formPath) {
-		return "/form/"+formPath;
+	public String moveForm(@PathVariable("formPath") String formPath) {
+		return "/form/" + formPath;
 	}
-	
+
 	@RequestMapping(value = "/footer")
-	public String footer() {return "common/footer";}
+	public String footer() {
+		return "common/footer";
+	}
+
 	@RequestMapping(value = "/top")
-	public String top() {return "common/top";}
-	
+	public String top() {
+		return "common/top";
+	}
+
 }

@@ -1,44 +1,49 @@
 <%@ page contentType="text/html; charset=UTF-8"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="EUC-KR"%>
+	pageEncoding="UTF-8"%>
+<!DOCTYPE html>
 <table class="mainTable">
-  <thead>
-  <tr class="textSize">
-    <th class="title_td">Á¦ ¸ñ</th>
-    <th>ÀÛ¼ºÀÚ</th>
-    <th>ÀÛ¼ºÀÏ</th>
-    <th>Á¶È¸¼ö</th>
-  </tr>
-  </thead>
-  <!--  <c:forEach>¹Ýº¹¹®À¸·Î tr ±ÛÀÇ °³¼ö ¸¸Å­ ÀÚµ¿ »ý¼º// -->
-<tr><td colspan="5"><hr></td></tr>
- <tr class="board_title">
-    <td>
-    <div class="title" onclick="">ÀÚÀ¯°Ô½ÃÆÇ ±Û1</div>
-    </td>
-    <td>±è´ë½Â</td>
-    <td>2017.11.02</td>
-    <td>55</td>
-  </tr>
-<tr><td colspan="5"><hr></td></tr>
- <tr class="board_title">
-    <td>
-    <div class="title" onclick="">ÀÚÀ¯°Ô½ÃÆÇ ±Û2</div>
-    </td>
-    <td>±è´ë½Â</td>
-    <td>2017.11.02</td>
-    <td>92</td>
-  </tr>
-<!--   </c:forEach> -->
-  <tr><td colspan=5><hr/></td></tr>
-  <tr class="textSize">
+	<thead>
+		<tr class="textSize">
+			<th class="title_td">ì œ ëª©</th>
+			<th>ìž‘ì„±ìž</th>
+			<th>ìž‘ì„±ì¼</th>
+			<th>ì¡°íšŒìˆ˜</th>
+		</tr>
+	</thead>
+	<!--  <c:forEach>ë°˜ë³µë¬¸ìœ¼ë¡œ tr ê¸€ì˜ ê°œìˆ˜ ë§Œí¼ ìžë™ ìƒì„±// -->
+	<tr>
+		<td colspan="5"><hr></td>
+	</tr>
+	<tr class="board_title">
+		<td>
+			<div class="title" onclick="">ìžìœ ê²Œì‹œíŒ ê¸€1</div>
+		</td>
+		<td>ê¹€ëŒ€ìŠ¹</td>
+		<td>2017.11.02</td>
+		<td>55</td>
+	</tr>
+	<tr>
+		<td colspan="5"><hr></td>
+	</tr>
+	<tr class="board_title">
+		<td>
+			<div class="title" onclick="">ìžìœ ê²Œì‹œíŒ ê¸€2</div>
+		</td>
+		<td>ê¹€ëŒ€ìŠ¹</td>
+		<td>2017.11.02</td>
+		<td>92</td>
+	</tr>
+	<!--   </c:forEach> -->
+	<tr>
+		<td colspan=5><hr /></td>
+	</tr>
+	<tr class="textSize">
 
-    <td colspan=3 align="right">
-
-
-      <input class="Button" type="button" onclick="" value='±Û¾²±â'/>
-
-    </td>
-  </tr>
-  <tr><td colspan=5><hr/></td></tr>
+		<td colspan=3 align="right"><input class="Button" type="button"
+			onclick="" value='ê¸€ì“°ê¸°' /></td>
+	</tr>
+	<tr>
+		<td colspan=5><hr /></td>
+	</tr>
 </table>
