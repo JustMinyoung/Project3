@@ -1,10 +1,10 @@
 <%@ page contentType="text/html; charset=UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <c:url var="home" value="/"/>
-	<link href="${pageContext.request.contextPath }/resources/css/main.css" rel="stylesheet">
-	<link href="${pageContext.request.contextPath }/resources/css/board.css" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+	<link href="<c:url value="/resources/css/main.css"/>" rel="stylesheet">
+	<link href="<c:url value="/resources/css/board.css"/>" rel="stylesheet">
+<!--     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> -->
+<!--     <script src="js/bootstrap.min.js"></script> -->
 	<header>
 		<div class="service_box">
 			<div class="service_box_inner">

@@ -81,11 +81,6 @@ body {
 	width: 60%;
 }
 
-p {
-	margin: 0;
-	padding: 0;
-}
-
 .board_box {
 	width: 1020px;
 	box-sizing: border-box;
@@ -276,4 +271,3 @@ p {
 	width: 200px;
 	text-align: center;
 }
-

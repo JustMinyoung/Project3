@@ -13,7 +13,7 @@
 	</thead>
 	<!--  <c:forEach>반복문으로 tr 글의 개수 만큼 자동 생성// -->
 	<tr>
-		<td colspan="5"><hr></td>
+		<td colspan="4"><hr></td>
 	</tr>
 	<tr class="board_title">
 		<td>
@@ -24,7 +24,7 @@
 		<td>55</td>
 	</tr>
 	<tr>
-		<td colspan="5"><hr></td>
+		<td colspan="4"><hr></td>
 	</tr>
 	<tr class="board_title">
 		<td>
@@ -36,14 +36,14 @@
 	</tr>
 	<!--   </c:forEach> -->
 	<tr>
-		<td colspan=5><hr /></td>
+		<td colspan=4><hr /></td>
 	</tr>
 	<tr class="textSize">
 
-		<td colspan=3 align="right"><input class="Button" type="button"
+		<td colspan=4 align="right"><input class="Button" type="button"
 			onclick="" value='글쓰기' /></td>
 	</tr>
 	<tr>
-		<td colspan=5><hr /></td>
+		<td colspan=4><hr /></td>
 	</tr>
 </table>
