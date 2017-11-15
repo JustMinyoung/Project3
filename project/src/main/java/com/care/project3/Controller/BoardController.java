@@ -1,4 +1,4 @@
-package com.care.project3;
+package com.care.project3.Controller;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 /**
  * test1
+ * 게시판 처리 컨트롤러
  */
 @RequestMapping("board")
 @Controller

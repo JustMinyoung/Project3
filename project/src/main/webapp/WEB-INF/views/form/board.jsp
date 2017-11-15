@@ -22,7 +22,7 @@ function writeFrm(home){
 	</thead>
 	<!--  <c:forEach>반복문으로 tr 글의 개수 만큼 자동 생성// -->
 	<tr>
-		<td colspan="5"><hr></td>
+		<td colspan="4"><hr></td>
 	</tr>
 	<tr class="board_title">
 		<td>
@@ -47,14 +47,6 @@ function writeFrm(home){
 	<tr>
 		<td colspan=4><hr /></td>
 	</tr>
-	<tr class="textSize">
 
-		<td colspan=4 align="right">
-			<input class="Button" type="button"	onclick="writeFrm('${home }')" value='글쓰기' />
-		</td>
-	</tr>
-	<tr>
-		<td colspan=4><hr /></td>
-	</tr>
 </table>
 </form>

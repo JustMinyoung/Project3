@@ -1,4 +1,4 @@
-package com.care.project3;
+package com.care.project3.Controller;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
- * test1
+ * 공통 컨트롤러
  */
 @Controller
 public class CommonController {
@@ -43,6 +43,23 @@ public class CommonController {
 	@RequestMapping(value = "/top")
 	public String top() {
 		return "common/top";
+	}
+	@RequestMapping("login_form")
+	public String login_form() {
+		logger.info("login_form");
+		return "form/login_form";
+	}
+	
+	@RequestMapping("join_form")
+	public String join_form() {
+		logger.info("join_form");
+		return "form/join_form";
+	}
+	
+	@RequestMapping("find_Password_form")
+	public String find_Password_form() {
+		logger.info("find_Password_form");
+		return "form/find_Password_form";
 	}
 
 }
