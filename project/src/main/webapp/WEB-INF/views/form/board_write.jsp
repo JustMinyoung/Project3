@@ -40,7 +40,7 @@
 
   			</script>
 		</div>
-		<div class="bvb_button_box">
+		<div class="bvb_button_boxtest">
 			<button type="submit">글쓰기</button>
 			<button type="button">취소</button>
 		</div>
