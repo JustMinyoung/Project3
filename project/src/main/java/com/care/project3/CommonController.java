@@ -22,11 +22,7 @@ public class CommonController {
 	public String index() {
 		return "redirect:home";
 	}
-
-	@RequestMapping(value = "/board")
-	public String board() {
-		return "form/board";
-	}
+ 
 
 	@RequestMapping(value = "/{formPath}")
 	public String indexForm(@PathVariable("formPath") String formPath, Model model) {
