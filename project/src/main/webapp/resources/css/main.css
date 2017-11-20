@@ -4,7 +4,7 @@
 }
 
 header a:link, header a:hover, header a:visited, header a:active {
-	color: #fff;
+	color:white;
 	text-decoration: none;
 }
 
@@ -16,9 +16,10 @@ body {
 }
 
 header {
-	color: white;
-}
 
+}
+header .service_ul a{color:white;}
+.header_warp {color:white;}
 li {
 	list-style-type: none;
 }

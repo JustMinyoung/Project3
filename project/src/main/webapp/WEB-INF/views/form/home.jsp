@@ -3,8 +3,8 @@
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ page session="false"%>
-<c:url var='home' value="/" />
-<c:url var='img' value="resources/img/" />
+<c:url var="home" value="/" />
+<c:url var='res' value="/resources/" />
 <!DOCTYPE html>
 <section class="board2section">
 	<article class="flbdform">

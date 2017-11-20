@@ -1,14 +1,7 @@
 <%@ page contentType="text/html; charset=UTF-8"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<script type="text/javascript"> 
-<!--
-function writeFrm(home){
-	document.getElementById('frm').action=home+"board/board_write";
-	document.getElementById('frm').submit();
-}
-//-->
-</script>
+
 <form id='frm' action="${home }board/board_write">
 
 <table class="mainTable">
