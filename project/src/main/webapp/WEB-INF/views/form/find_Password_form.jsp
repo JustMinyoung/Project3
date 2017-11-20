@@ -13,10 +13,10 @@
 <body class="at_log">
     <div class="container-fluid wrap">
       <div class="content_inner pw_find oh_sz">
-        <section class="fb_row pwfind_contents">
+        <section class="ufc_row pwfind_contents">
           <div class="at_logo">
             <a href="${home }home">
-              <img src="${img }UFC-Logo.png" class="fb_logo" id="ah_logo">
+              <img src="${img }UFC-Logo.png" class="ufc_logo" id="ah_logo">
             </a>
             <div class="mj_header">비밀번호 찾기</div>
           </div>

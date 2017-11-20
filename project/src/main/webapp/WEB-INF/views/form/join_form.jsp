@@ -4,22 +4,21 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ page session="false"%>
 <!DOCTYPE html>
-<c:url var='home' value="/" />
-<c:url var='img' value="resources/img/" />
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-<script	src="${pageContext.request.contextPath }/resources/js/bootstrap.js"></script>
-<link href="${pageContext.request.contextPath }/resources/css/UFCMaina_Main.css" rel="stylesheet">
-<link href="${pageContext.request.contextPath }/resources/css/join.css" rel="stylesheet">
+<script	src="${res }js/bootstrap.js"></script>
+<link href="${res }css/UFCMaina_Main.css" rel="stylesheet">
+<link href="${res }css/join.css" rel="stylesheet">
+<c:url var="home" value="/" />
+<c:url var='res' value="/resources/" />
 
-	<title>UFC MANIA | Join</title>
 
 <body class="at_log">
     <div class="container-fluid wrap">
       <div class="content_inner auth_join oh_sz">
-        <section class="fb_row join_contents">
+        <section class="ufc_row join_contents">
           <div class="at_logo">
             <a href="${home }home">
-              <img src="${img }UFC-Logo.png" class="fb_logo" id="ah_logo" />
+              <img src="${res }img/UFC-Logo.png" class="ufc_logo" id="ah_logo" />
             </a>
             <div class="mj_header">UFC Mania 회원가입</div>
           </div>
@@ -73,7 +72,7 @@
                     </div>
                   </div>
                   <div class="checkbox">
-                    <div class="checkbox_fb"></div>
+                    <div class="checkbox_ufc"></div>
                     <label>
                       <input type="checkbox" id="tos_document" name="tos_check"/>약관 동의
                     </label>
@@ -99,7 +98,7 @@
                     </div>
                   </div>
                   <div class="checkbox">
-                    <div class="checkbox_fb"></div>
+                    <div class="checkbox_ufc"></div>
                     <label>
                       <input type="checkbox" id="personal_document" name="personal_check"/>개인정보취급방침 확인
                     </label>
