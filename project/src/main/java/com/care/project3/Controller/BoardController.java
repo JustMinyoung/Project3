@@ -27,6 +27,11 @@ public class BoardController {
 		return "form/board";
 	}
 	
+	@RequestMapping("main_gellery_board")
+	public String main_gellery_board() {
+		return "form/main_gellery_board";
+	}
+	
 	@RequestMapping("news_board")
 	public String news_board() {
 		logger.info("news_board");

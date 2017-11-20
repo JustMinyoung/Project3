@@ -61,5 +61,7 @@ public class CommonController {
 		logger.info("find_Password_form");
 		return "form/find_Password_form";
 	}
+	
+	
 
 }

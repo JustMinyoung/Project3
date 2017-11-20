@@ -98,7 +98,7 @@ table {
 }
 
 .board2section {
-	height: 107px;
+
 }
 
 .board2section:after {
@@ -153,6 +153,7 @@ table {
 
 .news_img img {
 	width: 250px;
+	margin: 8px 2px 0 2px;
 }
 
 footer {
@@ -171,4 +172,14 @@ footer {
 }
 .login_btn{
 	cursor: pointer;
+}
+
+.mgm_sch_header{
+	font-weight: normal;
+	color: #fff;
+	height: 40px;
+	line-height: 24px;
+	font-size: 13px;
+	background: #000000;
+	padding: 8px 15px;
 }
