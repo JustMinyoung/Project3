@@ -67,7 +67,7 @@ body {
 	display: none;
 }
 
-.Button {
+.wbutton {
 	height: 35px;
 	width: 100px;
 	color: #fff;
@@ -270,4 +270,12 @@ p {
 .schedule_table td:first-child {
 	width: 200px;
 	text-align: center;
+}
+.boardOption .wbutton{
+	margin-right: 10px;
+}
+.boardOption {
+	text-align: right;
+	padding: 10px 0;
+	background-color: black;
 }

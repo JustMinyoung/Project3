@@ -4,6 +4,9 @@
 <!DOCTYPE html>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <c:import url="/board" />
+<div class="boardOption">
+<input class="wbutton" type="button" onclick="writeFrm('${home }')" value='글쓰기' />
+</div>
 <table>
 	<tr>
 		<td><select name="selectOpt">
