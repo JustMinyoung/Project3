@@ -8,34 +8,21 @@
 <!DOCTYPE html>
 <section class="board2section">
 	<article class="flbdform">
-		<h1>주간인기소식</h1>
-		<table class="board_table">
-			<tr>
-				<td style="height: 400px;"><c:import url="/board" /></td>
-			</tr>
-		</table>
+		<div class="mgm_sch_header">주간 최신소식</div>
+		<c:import url="/board/main_gellery_board" />
 	</article>
 	<article class="flbdform">
-		<h1>주간인기글</h1>
-		<table class="board_table">
-			<thead>
-				<td>글번호</td>
-				<td>제목</td>
-				<td>작성자</td>
-			</thead>
-			<tbody>
-				<tr>
-					<td>1</td>
-					<td>주간인기글</td>
-					<td>홍길동</td>
-				</tr>
-			</tbody>
-		</table>
+		<div class="mgm_sch_header">주간 최신영상</div>
+		<c:import url="/board/main_gellery_board" />
 	</article>
-</section>
+</section> 
+
+<div class="mgm_sch_header">주요 경기일정</div>
+
 <section class="news_zone">
 	<article class="news_img">
 		<img src="${img }VS.jpg" />
+		<h3>타이론 우들리 VS 김동현</h3>
 	</article>
 	<article class="news_img">
 		<img src="${img }VS.jpg" />
