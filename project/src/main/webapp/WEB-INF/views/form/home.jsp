@@ -21,16 +21,16 @@
 
 <section class="news_zone">
 	<article class="news_img">
-		<img src="${img }VS.jpg" />
+		<img src="${res }img/VS.jpg" />
 		<h3>타이론 우들리 VS 김동현</h3>
 	</article>
 	<article class="news_img">
-		<img src="${img }VS.jpg" />
+		<img src="${res }img/VS.jpg" />
 	</article>
 	<article class="news_img">
-		<img src="${img }VS.jpg" />
+		<img src="${res }img/VS.jpg" />
 	</article>
 	<article class="news_img">
-		<img src="${img }VS.jpg" />
+		<img src="${res }img/VS.jpg" />
 	</article>
 </section>

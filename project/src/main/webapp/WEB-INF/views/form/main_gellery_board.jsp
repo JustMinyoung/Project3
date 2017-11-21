@@ -6,7 +6,7 @@
 <table class="gallery">
 	<tbody>
 		<tr>
-			<td><img src="img/koala.jpg" class="gallery_img" /></td>
+			<td><img src="${pageContext.request.contextPath}/image/${imageFile.id}"></td>
 			<td>
 				<p class="gallery_brd_title">제목입니다. 제목입니다.</p>
 				<p class="gallery_brd_desc">내용입니다. 내용입니다.내용입니다. 내용입니다.내용입니다.

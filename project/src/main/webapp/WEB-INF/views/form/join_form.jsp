@@ -4,12 +4,16 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ page session="false"%>
 <!DOCTYPE html>
-<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-<script	src="${res }js/bootstrap.js"></script>
-<link href="${res }css/UFCMaina_Main.css" rel="stylesheet">
-<link href="${res }css/join.css" rel="stylesheet">
 <c:url var="home" value="/" />
 <c:url var='res' value="/resources/" />
+<link href="${res }css/main.css"	rel="stylesheet">
+<link href="${res }css/board.css" rel="stylesheet">
+<link href="${res }css/login.css" rel="stylesheet">
+<link href="${res }css/join.css" rel="stylesheet">
+<link href="${res }css/UFCMaina_Main.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script	src="${res }js/bootstrap.min.js"></script>
 
 
 <body class="at_log">
