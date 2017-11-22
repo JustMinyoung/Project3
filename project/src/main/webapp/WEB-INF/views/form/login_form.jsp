@@ -4,12 +4,13 @@
 <c:url var="home" value="/" />
 <c:url var='res' value="/resources/" />
 <!DOCTYPE html>
+<form action="${home }member/loginProc" method="post">
 <div class="modal-body">
 	<div class="form-group md_email">
 		<div class="ufc_label email">
 			<i class="fa fa-envelope"></i>
 		</div>
-		<input class="form-control" id="inputEmail" name="user_id" value=""
+		<input class="form-control" id="inputEmail" name="email" 
 			placeholder="이메일 주소" type="email">
 		<div class="email modal_err">
 			<i class="fa fa-times"></i>
@@ -20,8 +21,8 @@
 		<div class="ufc_label pw">
 			<i class="fa fa-lock"></i>
 		</div>
-		<input class="form-control" id="inputPassword" name="user_password"
-			placeholder="비밀번호" type="password">
+		<input class="form-control" id="inputPassword" name="password"
+			placeholder="비밀번호" type="password" >
 		<div class="pw modal_err">
 			<i class="fa fa-times"></i>
 		</div>
@@ -38,7 +39,7 @@
 </div>
 <div class="modal-footer">
 	<div class="ot_main">
-		<button type="button" class="btn btn-primary login_confirm_btn">로그인</button>
+		<button type="submit" class="btn btn-primary login_confirm_btn">로그인</button>
 	</div>
 	<div class="ot_log">
 		<a href="${home }join_form">
@@ -62,4 +63,5 @@
 		</div>
 	</div>
 </div>
+</form>
 

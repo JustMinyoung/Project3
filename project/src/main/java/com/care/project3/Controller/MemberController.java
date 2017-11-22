@@ -12,20 +12,19 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.care.project3.DTO.Login;
 import com.care.project3.DTO.Member;
 import com.care.project3.IService.MemberService;
 
-
-
 /**
- * ·Î±×ÀÎ,È¸¿ø°¡ÀÔ Ã³¸®
+ * ï¿½Î±ï¿½ï¿½ï¿½,È¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Ã³ï¿½ï¿½
  */
 @RequestMapping("member")
 @Controller
 public class MemberController {
 	@Autowired
 	private MemberService memberSer;
-	
+
 	private static final Logger logger = LoggerFactory.getLogger(MemberController.class);
 
 	/**
@@ -35,17 +34,19 @@ public class MemberController {
 	public String member_home() {
 		return "redirect:/";
 	}
-	
+
 	@RequestMapping("memberProc")
-	public String memberProc(
-			Member member,
-			Model model
-			 ) {
+	public String memberProc(Member member, Model model) {
 		memberSer.memberProc(member);
 		model.addAttribute("member", member);
 		return "forward:home";
 	}
-
- 
-
+	@RequestMapping("loginProc")
+	public String loginProc(Model model,
+			Login login) {
+		if(memberSer.loginProc(login))
+			return "redirect:/home";
+		model.addAttribute("msg", "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½");
+		return "forward:/home";
+	}
 }

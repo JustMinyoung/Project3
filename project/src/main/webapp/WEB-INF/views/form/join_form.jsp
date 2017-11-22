@@ -32,13 +32,13 @@
               <div class="mj_main">
                 <div class="form-group">
                   <div class="tt_hd">이메일</div>
-                  <input type="text" class="form-control" id="join_inputEmail" name="email" value="${mamber.email }">
+                  <input type="text" class="form-control" id="join_inputEmail" name="email" value="${member.email }">
                   <div class="mj_email err_ic"><i class="fa fa-times"></i></div>
                   <div class="vd_err_msg" id="email_alert_mj"></div>
                 </div>                
                 <div class="form-group">
                   <div class="tt_hd">비밀번호</div>
-                  <input type="password" class="form-control" id="join_inputPassword" name="password" value="${mamber.password }">
+                  <input type="password" class="form-control" id="join_inputPassword" name="password" value="${member.password }">
                   <div class="mj_pw err_ic"><i class="fa fa-times"></i></div>
                   <div class="vd_err_msg" id="pw_alert_mj"></div>
                 </div>

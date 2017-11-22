@@ -8,7 +8,13 @@
 		(NO, EMAIL, PASSWORD, NICKNAME)
 		VALUES (Member_SEQ.NEXTVAL, #{email}, #{password}, #{nickname})
 	</insert>
-	
+	<select id="loginProc" resultType="int"
+	parameterType="com.care.project3.DTO.Login">
+		SELECT COUNT(*)
+		FROM MEMBER
+		WHERE EMAIL=#{email}
+		AND PASSWORD=#{password}
+	</select>
 </mapper>
 
 
