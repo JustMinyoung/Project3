@@ -1,20 +1,23 @@
 package com.care.project3.Controller;
 
+import javax.sql.DataSource;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 /**
  * 공통 컨트롤러
  */
 @Controller
 public class CommonController {
-
-	private static final Logger logger = LoggerFactory.getLogger(CommonController.class);
-
+	
+	private static final Logger logger = LoggerFactory.getLogger(CommonController.class); 
 	/**
 	 * Simply selects the home view to render by returning its name.
 	 */

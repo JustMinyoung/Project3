@@ -1,8 +1,8 @@
-package com.care.project3.DTO;
+/*package com.care.project3.DTO;
 
 public class ImageFile {
-	/** * 업로드한 이미지 파일이 저장될 경로 */ 
-	public static final String IMAGE_DIR = "D:/KimDaeSeung/spring/file/"; 
+	*//** * 업로드한 이미지 파일이 저장될 경로 *//* 
+	public static final String IMAGE_DIR = "C:/Users/user/git/project/src/main/webapp/resources/img/"; 
 	private String id; 
 	private String contentType; 
 	private int contentLength; 
@@ -40,3 +40,4 @@ public class ImageFile {
 	
 }
 
+*/

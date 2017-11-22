@@ -1,4 +1,4 @@
-package com.care.project3.ImageService;
+/*package com.care.project3.ImageService;
 
 import java.io.BufferedInputStream;
 import java.io.FileInputStream;
@@ -30,9 +30,9 @@ public class ImageView extends AbstractView{
 		write(res, bytes);
 	}
 
-	/**
+	*//**
 	 * 파일로부터 byte 배열 읽어오기 
-	 */
+	 *//*
 	private byte[] readFile(String fileName) throws IOException {
 		String path = ImageFile.IMAGE_DIR + fileName;
 		
@@ -45,12 +45,12 @@ public class ImageView extends AbstractView{
 		return bytes;
 	}
 
-	/**
+	*//**
 	 * 응답 OutputStream에 파일 내용 쓰기
-	 */
+	 *//*
 	private void write(HttpServletResponse res, byte[] bytes) throws IOException {
 		OutputStream output = res.getOutputStream();
 		output.write(bytes);
 		output.flush();
 	}
-}
+}*/

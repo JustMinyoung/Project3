@@ -1,4 +1,4 @@
-package com.care.project3.Controller;
+/*package com.care.project3.Controller;
 
 import javax.annotation.Resource;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,25 +16,25 @@ import com.care.project3.ImageService.ImageView;
 
 @Controller
 public class ImageUploadController {
-	/*
+	
 	 * * ImageView는 파일 시스템에 있는 이미지 파일을 응답으로 돌려주는 역할을 합니다. * 뒷 부분에서 ImageView
 	 * 클래스를 작성하게 됩니다.
-	 */ @Resource(name = "imageView")
+	  @Resource(name = "imageView")
 	ImageView imageView;
-	/**
+	*//**
 	 * * 이미지를 관리하는 서비스 계층 클래스입니다. 예제에서는 디비를 사용하긴 버거워지므로 * 서비스 클래스를 따라하는 모양만 서비스인
 	 * 클래스입니다.
-	 */
+	 *//*
 	@Autowired
 	ImageService imageService;
 
-	/** * 이미지 업로드를 위한 페이지 매핑 */
+	*//** * 이미지 업로드를 위한 페이지 매핑 *//*
 	@RequestMapping("/uploadPage")
 	private String uploadView() {
 		return "upload";
 	}
 
-	/** * 이미지 업로드 페이지의 폼에서 전송 시 받게 되는 메서드 */
+	*//** * 이미지 업로드 페이지의 폼에서 전송 시 받게 되는 메서드 *//*
 	@RequestMapping(value = "board/upload", method = RequestMethod.POST)
 	private String upload(@RequestParam MultipartFile imageFile, ModelMap modelMap) {
 		ImageFile fileInfo = imageService.save(imageFile);
@@ -49,3 +49,4 @@ public class ImageUploadController {
 		return imageView;
 	}
 }
+*/

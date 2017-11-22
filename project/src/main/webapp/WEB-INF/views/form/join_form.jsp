@@ -27,30 +27,30 @@
             <div class="mj_header">UFC Mania 회원가입</div>
           </div>
           <div class="at mj_area">     
-		<form class="form-horizontal" id="member_join_action" method="post" accept-charset="utf-8">
+		<form class="form-horizontal" id="join" action="${home }member/memberProc" method="post" accept-charset="utf-8">
 		<input type="hidden" name="csrf_test_name" style="display:none;">
               <div class="mj_main">
                 <div class="form-group">
                   <div class="tt_hd">이메일</div>
-                  <input type="email" class="form-control" id="join_inputEmail" name="user_id" value="">
+                  <input type="text" class="form-control" id="join_inputEmail" name="email" value="${mamber.email }">
                   <div class="mj_email err_ic"><i class="fa fa-times"></i></div>
                   <div class="vd_err_msg" id="email_alert_mj"></div>
                 </div>                
                 <div class="form-group">
                   <div class="tt_hd">비밀번호</div>
-                  <input type="password" class="form-control" id="join_inputPassword" name="user_password">
+                  <input type="password" class="form-control" id="join_inputPassword" name="password" value="${mamber.password }">
                   <div class="mj_pw err_ic"><i class="fa fa-times"></i></div>
                   <div class="vd_err_msg" id="pw_alert_mj"></div>
                 </div>
                 <div class="form-group">
                   <div class="tt_hd">비밀번호 확인</div>
-                  <input type="password" class="form-control" id="join_inputPassword_check" name="user_password_check">
+                  <input type="password" class="form-control" id="join_inputPassword_check" name="passwordOk">
                   <div class="pw_check err_ic"><i class="fa fa-times"></i></div>
                   <div class="vd_err_msg" id="pwchk_alert_mj"></div>
                 </div>
                 <div class="form-group">
                   <div class="tt_hd">닉네임</div>
-                  <input type="text" class="form-control" id="join_inputCallname" name="user_callname" value="">
+                  <input type="text" class="form-control" id="join_inputCallname" name="nickname" value="${member.nickname }">
                   <div class="cn err_ic"><i class="fa fa-times"></i></div>
                   <div class="vd_err_msg" id="cn_alert_mj"></div>
                 </div>
@@ -113,7 +113,7 @@
                 </div>
                 <div class="mj_btn_ar">
                   <button type="reset" class="btn mj_cancel_btn">작성취소</button>
-                  <button type="button" class="btn mj_confirm_btn" data-loading-text="인증 이메일 발송중" autocomplete="off">작성완료</button>
+                  <button type="submit" class="btn mj_confirm_btn" data-loading-text="인증 이메일 발송중" autocomplete="off">작성완료</button>
                 </div>
               </div>
             </form>
