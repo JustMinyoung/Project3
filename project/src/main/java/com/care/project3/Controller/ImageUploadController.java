@@ -17,24 +17,24 @@ import com.care.project3.ImageService.ImageView;
 @Controller
 public class ImageUploadController {
 	
-	 * * ImageView´Â ÆÄÀÏ ½Ã½ºÅÛ¿¡ ÀÖ´Â ÀÌ¹ÌÁö ÆÄÀÏÀ» ÀÀ´äÀ¸·Î µ¹·ÁÁÖ´Â ¿ªÇÒÀ» ÇÕ´Ï´Ù. * µŞ ºÎºĞ¿¡¼­ ImageView
-	 * Å¬·¡½º¸¦ ÀÛ¼ºÇÏ°Ô µË´Ï´Ù.
+	 * * ImageViewëŠ” íŒŒì¼ ì‹œìŠ¤í…œì— ìˆëŠ” ì´ë¯¸ì§€ íŒŒì¼ì„ ì‘ë‹µìœ¼ë¡œ ëŒë ¤ì£¼ëŠ” ì—­í• ì„ í•©ë‹ˆë‹¤. * ë’· ë¶€ë¶„ì—ì„œ ImageView
+	 * í´ë˜ìŠ¤ë¥¼ ì‘ì„±í•˜ê²Œ ë©ë‹ˆë‹¤.
 	  @Resource(name = "imageView")
 	ImageView imageView;
 	*//**
-	 * * ÀÌ¹ÌÁö¸¦ °ü¸®ÇÏ´Â ¼­ºñ½º °èÃş Å¬·¡½ºÀÔ´Ï´Ù. ¿¹Á¦¿¡¼­´Â µğºñ¸¦ »ç¿ëÇÏ±ä ¹ö°Å¿öÁö¹Ç·Î * ¼­ºñ½º Å¬·¡½º¸¦ µû¶óÇÏ´Â ¸ğ¾ç¸¸ ¼­ºñ½ºÀÎ
-	 * Å¬·¡½ºÀÔ´Ï´Ù.
+	 * * ì´ë¯¸ì§€ë¥¼ ê´€ë¦¬í•˜ëŠ” ì„œë¹„ìŠ¤ ê³„ì¸µ í´ë˜ìŠ¤ì…ë‹ˆë‹¤. ì˜ˆì œì—ì„œëŠ” ë””ë¹„ë¥¼ ì‚¬ìš©í•˜ê¸´ ë²„ê±°ì›Œì§€ë¯€ë¡œ * ì„œë¹„ìŠ¤ í´ë˜ìŠ¤ë¥¼ ë”°ë¼í•˜ëŠ” ëª¨ì–‘ë§Œ ì„œë¹„ìŠ¤ì¸
+	 * í´ë˜ìŠ¤ì…ë‹ˆë‹¤.
 	 *//*
 	@Autowired
 	ImageService imageService;
 
-	*//** * ÀÌ¹ÌÁö ¾÷·Îµå¸¦ À§ÇÑ ÆäÀÌÁö ¸ÅÇÎ *//*
+	*//** * ì´ë¯¸ì§€ ì—…ë¡œë“œë¥¼ ìœ„í•œ í˜ì´ì§€ ë§¤í•‘ *//*
 	@RequestMapping("/uploadPage")
 	private String uploadView() {
 		return "upload";
 	}
 
-	*//** * ÀÌ¹ÌÁö ¾÷·Îµå ÆäÀÌÁöÀÇ Æû¿¡¼­ Àü¼Û ½Ã ¹Ş°Ô µÇ´Â ¸Ş¼­µå *//*
+	*//** * ì´ë¯¸ì§€ ì—…ë¡œë“œ í˜ì´ì§€ì˜ í¼ì—ì„œ ì „ì†¡ ì‹œ ë°›ê²Œ ë˜ëŠ” ë©”ì„œë“œ *//*
 	@RequestMapping(value = "board/upload", method = RequestMethod.POST)
 	private String upload(@RequestParam MultipartFile imageFile, ModelMap modelMap) {
 		ImageFile fileInfo = imageService.save(imageFile);

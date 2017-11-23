@@ -33,8 +33,16 @@
 				class="org.springframework.web.multipart.commons.CommonsMultipartResolver"/> -->
 
 	<context:component-scan base-package="com.care.project3.Controller" />
-
+<!-- 
+	<interceptors>
+		<interceptor>
+			<mapping path="/home" />
+			<beans:bean class="com.care.project3.Util.LoginInterceptor"></beans:bean>
+		</interceptor>
+	</interceptors> -->
 
 
 
 </beans:beans>
+
+

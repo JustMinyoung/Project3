@@ -7,5 +7,5 @@ import com.care.project3.DTO.Member;
 
 public interface MemberService {
 	public void memberProc(Member member);
-	public boolean loginProc(Login login);
+	public boolean loginProc(Member member);
 }

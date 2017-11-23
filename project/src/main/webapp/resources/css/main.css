@@ -10,7 +10,7 @@ header a:link, header a:hover, header a:visited, header a:active {
 
 body {
 	color: black;
-	font-family: '³ª´®¹Ù¸¥°íµñ';
+	font-family: 'ï¿½ï¿½ï¿½ï¿½ï¿½Ù¸ï¿½ï¿½ï¿½ï¿½';
 	background-color: #fff;
 	margin: 0px;
 }
@@ -18,7 +18,7 @@ body {
 header {
 
 }
-header .service_ul a{color:white;}
+header .service_ul li{color:white;}
 .header_warp {color:white;}
 li {
 	list-style-type: none;
