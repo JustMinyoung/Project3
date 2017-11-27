@@ -3,6 +3,10 @@ package com.care.project3.Controller;
 import java.util.HashMap;
 import java.util.Map;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,10 +23,11 @@ import com.care.project3.DTO.Member;
 import com.care.project3.IService.MemberService;
 
 /**
- * È¸¿ø°¡ÀÔ,·Î±×ÀÎ Ã³¸®
+ * member controller
  */
 @RequestMapping("member")
 @Controller
+
 //@SessionAttributes("sessionInfo")
 public class MemberController {
 	@Autowired
@@ -34,10 +39,6 @@ public class MemberController {
 	 * Simply selects the home view to render by returning its name.
 	 */
 
-	@RequestMapping(value = "home")
-	public String member_home() {
-		return "redirect:/";
-	}
 	
 	@RequestMapping("isExistId")
 	public String isExistId(Member member, 
@@ -45,9 +46,9 @@ public class MemberController {
 			Map<String, Object> sInfo,
 			Model model) {
 		model.addAttribute("msg", memberSer.isExistId(member, sInfo));
-		model.addAttribute("member", member);
-		return "forward:/join_form";
+		return "redirect:/home";
 	}
+
 	
 	@RequestMapping("memberProc")
 	public String memberProc(
@@ -59,17 +60,29 @@ public class MemberController {
 			return "forward:/home";
 		}
 		else 
-		model.addAttribute("alert", "<script>alert('°¡ÀÔÁ¤º¸°¡ Àß¸ø µÇ¾ú½À´Ï´Ù.');</script>");
+		model.addAttribute("alert", "<script>alert('ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ß¸ï¿½ ï¿½Ç¾ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.');</script>");
 		model.addAttribute("member", member);
 		return "forward:/join_form";
 	}
 	
 	@RequestMapping("loginProc")
-	public String loginProc(Model model,
-			Login login) {
-		if(memberSer.loginProc(login))
+	public String loginProc(Model model, Member member, HttpSession session) {
+		if (memberSer.loginProc(member)) {
+			session.setAttribute("member", member);
 			return "redirect:/home";
-		model.addAttribute("msg", "´©±¸³Ä");
-		return "forward:/home";
+		} else {
+			model.addAttribute("msg", "login_failed");
+			return "redirect:/home";
+		}
 	}
+
+	@RequestMapping("logout")
+	public String logout(HttpSession session, HttpServletRequest request) {
+
+		session = request.getSession(false);
+		request.getSession(true).invalidate();
+
+		return "redirect:/home";
+	}
+
 }

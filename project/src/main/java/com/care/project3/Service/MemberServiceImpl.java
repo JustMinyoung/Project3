@@ -44,8 +44,8 @@ public class MemberServiceImpl implements MemberService {
 	}
 	
 	@Override
-	public boolean loginProc(Login login) {
-		if(memberDao.loginProc(login)==0)
+	public boolean loginProc(Member member) {
+		if(memberDao.loginProc(member)==0)
 			return false;
 		return true;
 	}

@@ -33,16 +33,17 @@
 				<p id="content">Hello</p>
 			</div>
 			<script>
-		
-			        $('#summernote').summernote({
-			        	height: 300
-			        });
-
-  			</script>
+				$('#summernote').summernote({
+					height : 300
+				});
+			</script>
+		</div>
+		<div>
+		<input type="file" id="upload_file"/>
 		</div>
 		<div class="bvb_button_boxtest">
 			<button type="submit">글쓰기</button>
-			<button type="button">취소</button>
+			<button type="reset">취소</button>
 		</div>
 	</div>
 </form>

@@ -12,8 +12,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 /**
- * 공통 컨트롤러
+ * common controller
  */
+
 @Controller
 public class CommonController {
 	
