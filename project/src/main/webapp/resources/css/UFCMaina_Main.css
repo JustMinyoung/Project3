@@ -1164,12 +1164,12 @@ div.mj_area {
 div.mj_area div.tt_hd {
 	display: inline-block;
 	position: absolute;
-	width: 95px;
+	width: 90px;
 	height: 34px;
 	color: #999;
 	text-align: center;
 	line-height: 20px;
-	padding: 7px 10px;
+	padding: 7px 2px;
 	background: #f5f5f5;
 	border: 1px solid #f5f5f5;
 }
@@ -1204,7 +1204,7 @@ div.mj_area .form-control:focus {
 	box-shadow: 0 0 0;
 }
 
-div.mj_area div.vd_err_msg {
+div.mj_area div.vd_err_msg{
 	display: none;
 	position: relative;
 	width: 335px;
@@ -1425,6 +1425,8 @@ div.mj_btn_ar button.mj_cancel_btn:hover {
 	background: #e74c3c;
 	border: 1px solid #e74c3c;
 }
+
+
 
 div.mj_btn_ar button.mj_confirm_btn {
 	background: #656d78;

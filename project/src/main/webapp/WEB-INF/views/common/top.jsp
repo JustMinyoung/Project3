@@ -6,6 +6,10 @@
 <link href="${res }css/board.css" rel="stylesheet">
 <link href="${res }css/login.css" rel="stylesheet">
 <link href="${res }css/UFCMaina_Main.css" rel="stylesheet">
+<link href="${res }font-awesome/css/font-awesome.min.css" rel="stylesheet">
+<script src="${res }js/jquery-confirm.min.js"></script>
+<script src="${res }js/jquery.js"></script>
+<script src="${res }js/20171123.js"></script>
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>

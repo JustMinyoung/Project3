@@ -65,3 +65,18 @@ body {
 .mj_main {
 	font-size: 11px;
 }
+button.emailCk_btn {
+	width: 15%;
+    color: #fff;
+    line-height: 30px;
+    cursor: pointer;
+    background: #656d78;
+	border: 1px solid #656d78;
+}
+
+button.emailCk_btn:hover{
+	color: #fff;
+	background: #337ab7;
+	border: 1px solid #2e6da4;
+} 
+

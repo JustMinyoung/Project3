@@ -1,5 +1,6 @@
 package com.care.project3.Controller;
 
+import java.util.HashMap;
 import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
@@ -27,23 +28,43 @@ import com.care.project3.IService.MemberService;
 @RequestMapping("member")
 @Controller
 
+//@SessionAttributes("sessionInfo")
 public class MemberController {
 	@Autowired
 	private MemberService memberSer;
 
 	private static final Logger logger = LoggerFactory.getLogger(MemberController.class);
-
+	@ModelAttribute("sessionInfo")
 	/**
 	 * Simply selects the home view to render by returning its name.
 	 */
 
-	@RequestMapping("memberProc")
-	public String memberProc(Member member, Model model) {
-		memberSer.memberProc(member);
-		model.addAttribute("member", member);
+	
+	@RequestMapping("isExistId")
+	public String isExistId(Member member, 
+			//@ModelAttribute("sessionInfo") 
+			Map<String, Object> sInfo,
+			Model model) {
+		model.addAttribute("msg", memberSer.isExistId(member, sInfo));
 		return "redirect:/home";
 	}
 
+	
+	@RequestMapping("memberProc")
+	public String memberProc(
+			Member member,
+			Model model,
+			//@ModelAttribute("sessionInfo")
+			Map<String, Object> sInfo) {
+		if(memberSer.memberProc(member,sInfo)){
+			return "forward:/home";
+		}
+		else 
+		model.addAttribute("alert", "<script>alert('���������� �߸� �Ǿ����ϴ�.');</script>");
+		model.addAttribute("member", member);
+		return "forward:/join_form";
+	}
+	
 	@RequestMapping("loginProc")
 	public String loginProc(Model model, Member member, HttpSession session) {
 		if (memberSer.loginProc(member)) {
