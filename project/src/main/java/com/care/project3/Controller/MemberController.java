@@ -35,21 +35,6 @@ public class MemberController {
 	private MemberService memberSer;
 
 	private static final Logger logger = LoggerFactory.getLogger(MemberController.class);
-	@ModelAttribute("sessionInfo")
-	/**
-	 * Simply selects the home view to render by returning its name.
-	 */
-
-	
-	@RequestMapping("isExistId")
-	public String isExistId(Member member, 
-			//@ModelAttribute("sessionInfo") 
-			Map<String, Object> sInfo,
-			Model model) {
-		model.addAttribute("msg", memberSer.isExistId(member, sInfo));
-		return "redirect:/home";
-	}
-
 	
 	@RequestMapping("memberProc")
 	public String memberProc(
