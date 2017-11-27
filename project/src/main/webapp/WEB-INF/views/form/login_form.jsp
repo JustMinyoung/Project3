@@ -3,6 +3,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <c:url var="home" value="/" />
 <c:url var='res' value="/resources/" />
+<link href="${res }css/UFCMaina_Main.css" rel="stylesheet">
 <!DOCTYPE html>
 <form action="${home }member/loginProc" method="post">
 <div class="modal-body">

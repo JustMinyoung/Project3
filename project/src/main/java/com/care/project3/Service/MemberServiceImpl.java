@@ -15,12 +15,34 @@ public class MemberServiceImpl implements MemberService {
 	@Autowired
 	private MemberDao memberDao;
 	
-	@Override
-	public void memberProc(Member member) {
-
-		 memberDao.insertMember(member);				
-			 
+	static void Msg(){
+		
 	}
+	
+	final String NOEXISTID = "<script>alert('사용가능한 이메일 입니다.');</script>";
+	final String EXISTID = "<script>alert('중복된 이메일 입니다.');</script>";
+	
+	@Override
+	public boolean memberProc(Member member, Map<String, Object> sInfo) {
+		String sId = (String)sInfo.get("checkedID");
+		
+		if(member.getEmail().equals(sId)){
+			memberDao.insertMember(member);
+			return true;
+		}
+		return false;
+	}
+
+	@Override
+	public String isExistId(Member member, 
+			Map<String, Object> sInfo) {
+		if(memberDao.isExistId(member.getEmail())==0){
+			sInfo.put("checkedID", member.getEmail());
+			return NOEXISTID;
+		}
+		return EXISTID;
+	}
+	
 	@Override
 	public boolean loginProc(Login login) {
 		if(memberDao.loginProc(login)==0)

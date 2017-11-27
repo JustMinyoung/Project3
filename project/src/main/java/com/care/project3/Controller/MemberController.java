@@ -1,5 +1,6 @@
 package com.care.project3.Controller;
 
+import java.util.HashMap;
 import java.util.Map;
 
 import org.slf4j.Logger;
@@ -11,42 +12,64 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.SessionAttributes;
 
 import com.care.project3.DTO.Login;
 import com.care.project3.DTO.Member;
 import com.care.project3.IService.MemberService;
 
 /**
- * ï¿½Î±ï¿½ï¿½ï¿½,È¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Ã³ï¿½ï¿½
+ * È¸¿ø°¡ÀÔ,·Î±×ÀÎ Ã³¸®
  */
 @RequestMapping("member")
 @Controller
+//@SessionAttributes("sessionInfo")
 public class MemberController {
 	@Autowired
 	private MemberService memberSer;
 
 	private static final Logger logger = LoggerFactory.getLogger(MemberController.class);
-
+	@ModelAttribute("sessionInfo")
 	/**
 	 * Simply selects the home view to render by returning its name.
 	 */
+
 	@RequestMapping(value = "home")
 	public String member_home() {
 		return "redirect:/";
 	}
-
-	@RequestMapping("memberProc")
-	public String memberProc(Member member, Model model) {
-		memberSer.memberProc(member);
+	
+	@RequestMapping("isExistId")
+	public String isExistId(Member member, 
+			//@ModelAttribute("sessionInfo") 
+			Map<String, Object> sInfo,
+			Model model) {
+		model.addAttribute("msg", memberSer.isExistId(member, sInfo));
 		model.addAttribute("member", member);
-		return "forward:home";
+		return "forward:/join_form";
 	}
+	
+	@RequestMapping("memberProc")
+	public String memberProc(
+			Member member,
+			Model model,
+			//@ModelAttribute("sessionInfo")
+			Map<String, Object> sInfo) {
+		if(memberSer.memberProc(member,sInfo)){
+			return "forward:/home";
+		}
+		else 
+		model.addAttribute("alert", "<script>alert('°¡ÀÔÁ¤º¸°¡ Àß¸ø µÇ¾ú½À´Ï´Ù.');</script>");
+		model.addAttribute("member", member);
+		return "forward:/join_form";
+	}
+	
 	@RequestMapping("loginProc")
 	public String loginProc(Model model,
 			Login login) {
 		if(memberSer.loginProc(login))
 			return "redirect:/home";
-		model.addAttribute("msg", "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½");
+		model.addAttribute("msg", "´©±¸³Ä");
 		return "forward:/home";
 	}
 }

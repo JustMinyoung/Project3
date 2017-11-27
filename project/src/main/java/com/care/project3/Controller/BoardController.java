@@ -9,8 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 /**
- * test1
- * 게시판 처리 컨트롤러
+ * 게시판 처리 
  */
 @RequestMapping("board")
 @Controller
