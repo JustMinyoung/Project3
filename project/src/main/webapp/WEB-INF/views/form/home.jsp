@@ -6,7 +6,6 @@
 <c:url var="home" value="/" />
 <c:url var='res' value="/resources/" />
 <!DOCTYPE html>
-${msg }
 <section class="board2section">
 	<article class="flbdform">
 		<div class="mgm_sch_header">주간 최신소식</div>

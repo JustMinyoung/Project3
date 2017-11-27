@@ -30,6 +30,7 @@ import com.care.project3.IService.MemberService;
 
 //@SessionAttributes("sessionInfo")
 public class MemberController {
+	final String EXISTED = "<script>alert('중복된 이메일 입니다.');</script>";
 	@Autowired
 	private MemberService memberSer;
 
@@ -56,11 +57,13 @@ public class MemberController {
 			Model model,
 			//@ModelAttribute("sessionInfo")
 			Map<String, Object> sInfo) {
-		if(memberSer.memberProc(member,sInfo))
+		if(memberSer.memberProc(member,sInfo)){
+			model.addAttribute("member", member);
 			return "forward:/home";
-		model.addAttribute("msg", memberSer.isExistId(member, sInfo));
-		model.addAttribute("member", member);
-		return "forward:/join_form";
+		} else { 
+			model.addAttribute("msg", EXISTED);
+			return "forward:/join_form";
+		}
 	}
 	
 	@RequestMapping("loginProc")

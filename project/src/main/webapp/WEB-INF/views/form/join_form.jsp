@@ -34,7 +34,7 @@ function formProc(cmd){
 }
 //-->
 </script>
-${alert }${msg }
+${msg }
 <body class="at_log">
 	<div class="container-fluid wrap">
 		<div class="content_inner auth_join oh_sz">
