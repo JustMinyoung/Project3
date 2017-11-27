@@ -19,14 +19,14 @@ public class MemberServiceImpl implements MemberService {
 		
 	}
 	
-	final String NOEXISTID = "<script>alert('»ç¿ë°¡´ÉÇÑ ÀÌ¸ŞÀÏ ÀÔ´Ï´Ù.');</script>";
-	final String EXISTID = "<script>alert('Áßº¹µÈ ÀÌ¸ŞÀÏ ÀÔ´Ï´Ù.');</script>";
+	final String NOEXISTID = "<script>alert(ì‚¬ìš©ê°€ëŠ¥í•œ ì´ë©”ì¼ ì…ë‹ˆë‹¤.);</script>";
+	final String EXISTID = "<script>alert(ì¤‘ë³µëœ ì´ë©”ì¼ ì…ë‹ˆë‹¤.);</script>";
 	
 	@Override
 	public boolean memberProc(Member member, Map<String, Object> sInfo) {
 		String sId = (String)sInfo.get("checkedID");
 		
-		if(member.getEmail().equals(sId)){
+		if(memberDao.isExistId(member.getEmail())==0){
 			memberDao.insertMember(member);
 			return true;
 		}

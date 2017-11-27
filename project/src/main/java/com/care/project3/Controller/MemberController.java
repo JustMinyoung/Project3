@@ -56,11 +56,9 @@ public class MemberController {
 			Model model,
 			//@ModelAttribute("sessionInfo")
 			Map<String, Object> sInfo) {
-		if(memberSer.memberProc(member,sInfo)){
+		if(memberSer.memberProc(member,sInfo))
 			return "forward:/home";
-		}
-		else 
-		model.addAttribute("alert", "<script>alert('���������� �߸� �Ǿ����ϴ�.');</script>");
+		model.addAttribute("msg", memberSer.isExistId(member, sInfo));
 		model.addAttribute("member", member);
 		return "forward:/join_form";
 	}
