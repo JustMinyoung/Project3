@@ -1,9 +1,26 @@
+<%@page import="org.eclipse.jdt.internal.compiler.ast.ReturnStatement"%>
+<%@page import="org.springframework.web.bind.annotation.RequestMapping"%>
 <%@ page contentType="text/html; charset=UTF-8"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+	<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<script type="text/javascript"> 
+<!--
+function detailView(no){
+	document.getElementById('writeNo').value=no;
+	document.getElementById('frm').submit();
+}
 
-<form id='frm' action="${home }board/board_write">
+function writeFrm(home){
+	document.getElementById('frm').action=home+"board_write";
+	document.getElementById('frm').submit();
+}
+//-->
+</script>
+<form id='frm' action="${home }board/detailRead">
+<input type="hidden" name="writeNo" id="writeNo">
 
+	
 <table class="mainTable">
 	<thead>
 		<tr class="textSize">
@@ -13,33 +30,27 @@
 			<th>조회수</th>
 		</tr>
 	</thead>
-	<!--  <c:forEach>반복문으로 tr 글의 개수 만큼 자동 생성// -->
+	<c:forEach var="freeboard" items="${boardLst }">
 	<tr>
 		<td colspan="4"><hr></td>
 	</tr>
 	<tr class="board_title">
 		<td>
-			<div class="title" onclick="detailView('${board.no}')">자유게시판 글1</div>
+			<div class="title" onclick="detailView('${freeboard.no}')">${freeboard.title }</div>
 		</td>
-		<td>김대승</td>
-		<td>2017.11.02</td>
-		<td>55</td>
+		<td>${freeboard.nickname }</td>
+		<td>${freeboard.write_date }</td>
+		<td>${freeboard.hit }</td>
 	</tr>
 	<tr>
 		<td colspan="4"><hr></td>
-	</tr>
-	<tr class="board_title">
-		<td>
-			<div class="title" onclick="">자유게시판 글2</div>
-		</td>
-		<td>김대승</td>
-		<td>2017.11.02</td>
-		<td>92</td>
-	</tr>
-	<!--   </c:forEach> -->
-	<tr>
-		<td colspan=4><hr /></td>
-	</tr>
-
+	</tr> 
+	 </c:forEach>
 </table>
+<c:if test='${pathpath eq "board/selectBoard"}'>
+	<div class="boardOption">
+		<input class="wbutton" type="button" onclick="writeFrm('${home }')" value='글쓰기' />
+	</div>
+</c:if>
+${navi }
 </form>

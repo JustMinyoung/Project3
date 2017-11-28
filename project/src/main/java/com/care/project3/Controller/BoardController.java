@@ -2,8 +2,13 @@ package com.care.project3.Controller;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import com.care.project3.IService.BoardService;
 
 /**
  * Board Controller
@@ -11,17 +16,21 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("board")
 @Controller
 public class BoardController {
-
+	@Autowired
+	private BoardService boardSer;
+	
 	private static final Logger logger = LoggerFactory.getLogger(BoardController.class);
-
-	/**
-	 * Simply selects the home view to render by returning its name.
-	 */
 
 	@RequestMapping("board")
 	public String board() {
 		return "form/board";
 	}
+	
+	@RequestMapping("freeBoard")
+	public String freeboard() {
+		return "form/freeboard";
+	}
+	
 
 	@RequestMapping("main_gellery_board")
 	public String main_gellery_board() {
@@ -57,5 +66,27 @@ public class BoardController {
 		logger.info("board_write");
 		return "redirect:/board_write";
 	}
+	
+	@RequestMapping("detailRead")
+	public String detailRead(Model model, 
+			@RequestParam("writeNo") String no) {
+		model.addAttribute("boardInfo", boardSer.detailRead(no));
+		return "forward:/board_view";
+	}
+	
+	@RequestMapping("selectBoard")
+	public String selectBoard(Model model, 
+			@RequestParam(value="curPage", defaultValue="1") String curPage,
+			@RequestParam(value="selectOpt", defaultValue="all") String selectOpt,
+			@RequestParam(value="searchWord", defaultValue="") String searchWord) throws Exception {
+		
+		System.out.println(selectOpt+" : "+searchWord);
+		model.addAttribute("boardLst", 
+				boardSer.selectBoard(curPage, selectOpt, searchWord));
+		model.addAttribute("navi", boardSer.getNavi(curPage, selectOpt, searchWord));
+		model.addAttribute("pathpath","board/selectBoard");
+		return "forward:/board";
+	}
+	
 
 }

@@ -2,14 +2,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<script type="text/javascript"> 
-<!--
-function writeFrm(home){
-	document.getElementById('frm').action=home+"board/board_write";
-	document.getElementById('frm').submit();
-}
-//-->
-</script>
+
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <c:import url="/board" />
 <div class="boardOption">

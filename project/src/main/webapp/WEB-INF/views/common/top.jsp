@@ -49,7 +49,7 @@
 			<li><a href="${home }board/hi_board">하이라이트</a></li>
 			<li><a href="${home }board/schedule_form">일정/결과</a></li>
 			<li><a href="${home }board/rank_form">순위/기록</a></li>
-			<li><a href="${home }freeboard">자유게시판</a></li>
+			<li><a href="${home }board/selectBoard">자유게시판</a></li>
 		</ul>
 	</nav>
 </div>

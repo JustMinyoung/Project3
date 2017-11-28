@@ -15,10 +15,6 @@ public class MemberServiceImpl implements MemberService {
 	@Autowired
 	private MemberDao memberDao;
 	
-	static void Msg(){
-		
-	}
-	
 	final String NOEXISTID = "<script>alert(사용가능한 이메일 입니다.);</script>";
 	final String EXISTID = "<script>alert(중복된 이메일 입니다.);</script>";
 	
@@ -26,7 +22,7 @@ public class MemberServiceImpl implements MemberService {
 	public boolean memberProc(Member member, Map<String, Object> sInfo) {
 		String sId = (String)sInfo.get("checkedID");
 		
-		if(memberDao.isExistId(member.getEmail())==0){
+		if(memberDao.isExistId(member.getEmail())==0 && member.getEmail().equals(sId)){
 			memberDao.insertMember(member);
 			return true;
 		}

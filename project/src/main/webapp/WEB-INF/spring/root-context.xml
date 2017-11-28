@@ -29,6 +29,8 @@
 	id="boardMapperBean"
 	p:mapperInterface="com.care.project3.IDAO.BoardDao"
 	p:sqlSessionFactory-ref="sqlSessionFactoryBean"/>
+
+	
 		<context:property-placeholder location="/WEB-INF/spring/jdbc.properties"/>
 		<context:component-scan base-package="com.care.project3.ImageService" />
 		<context:component-scan base-package="com.care.project3.Service" />
