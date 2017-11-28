@@ -15,7 +15,6 @@
 	
 	<select id="selectBoardCnt" parameterType="Map" resultType="int">
 		SELECT COUNT(*) FROM FREEBOARD
-		
 	</select>
 </mapper>
 

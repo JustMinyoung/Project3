@@ -9,7 +9,7 @@
 		</div>
 		<div class="bvb_info">
 			<p>${boardInfo.nickname }</p>
-			<p>${boardInfo.writedate } / ${boardInfo.Likes } / ${boardInfo.hit }</p>
+			<p>${boardInfo.write_date } / ${boardInfo.like } / ${boardInfo.hit }</p>
 		</div>
 	</div>
 	<div class="bvb_contents">

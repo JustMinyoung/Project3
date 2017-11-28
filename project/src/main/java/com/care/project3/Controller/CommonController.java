@@ -25,7 +25,7 @@ public class CommonController {
 	@RequestMapping(value = "/")
 	public String index() {
 		return "redirect:home";
-	}
+	} 
  
 
 	@RequestMapping(value = "/{formPath}")

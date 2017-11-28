@@ -17,7 +17,7 @@ function writeFrm(home){
 }
 //-->
 </script>
-<form id='frm' action="${home }board/detailRead">
+<form id='frm' action="${home }detailRead">
 <input type="hidden" name="writeNo" id="writeNo">
 
 	
