@@ -1,17 +1,17 @@
 package com.care.project3.DTO;
 
 public class Member extends Login {
-	//È¸¿ø¹øÈ£
+	//È¸ï¿½ï¿½ï¿½ï¿½È£
 	private int no;
-	//´Ð³×ÀÓ
+	//ï¿½Ð³ï¿½ï¿½ï¿½
 	private String nickname;
-	//°¡ÀÔÀÏÀÚ
+	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	private String regist_date;
-	//ÃÖ±Ù¹æ¹®ÀÏ
+	//ï¿½Ö±Ù¹æ¹®ï¿½ï¿½
 	private String recent_visit_date;
-	//¹æ¹®È½¼ö
+	//ï¿½æ¹®È½ï¿½ï¿½
 	private String visit_num;
-	//ÇÁ·ÎÇÊ»çÁø
+	//ï¿½ï¿½ï¿½ï¿½ï¿½Ê»ï¿½ï¿½ï¿½
 	private String photo;
 	
 	public int getNo() {

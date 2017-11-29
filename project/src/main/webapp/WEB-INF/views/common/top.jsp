@@ -14,13 +14,14 @@
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script src="${res }js/bootstrap.min.js"></script>
+${msg }
 <div class="service_box">
 	<div class="service_box_inner">
 		<ul class="service_ul">
 			<%
-				if (session.getAttribute("member") != null) {
+				if (session.getAttribute("membersession") != null) {
 			%>
-			<li>${member.email }</li>
+			<li>${membersession.nickname }</li>
 			<li><a href="${home }member/logout">로그아웃</a></li>
 			<%
 				} else {

@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.SessionAttributes;
 
 import com.care.project3.IService.BoardService;
 
@@ -15,6 +16,7 @@ import com.care.project3.IService.BoardService;
  */
 @RequestMapping("board")
 @Controller
+@SessionAttributes("membersession")
 public class BoardController {
 	@Autowired
 	private BoardService boardSer;

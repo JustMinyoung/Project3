@@ -131,9 +131,9 @@ INSERT INTO FreeBoard
     Hit, 
     Likes)
 VALUES
-    (FreeBoard_SEQ.NEXTVAL,'title 7', 
-    'Nickname 7', 
-    'Contents 7', 
+    (FreeBoard_SEQ.NEXTVAL,'title 1', 
+    'Nickname 1', 
+    'Contents 1', 
     sysdate, 
     2, 
     2)

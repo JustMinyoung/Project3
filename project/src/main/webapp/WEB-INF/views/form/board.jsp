@@ -3,54 +3,56 @@
 <%@ page contentType="text/html; charset=UTF-8"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-	<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<script type="text/javascript"> 
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<script type="text/javascript">
 <!--
-function detailView(no){
-	document.getElementById('writeNo').value=no;
-	document.getElementById('frm').submit();
-}
+	function detailView(no) {
+		document.getElementById('writeNo').value = no;
+		document.getElementById('frm').submit();
+	}
 
-function writeFrm(home){
-	document.getElementById('frm').action=home+"board_write";
-	document.getElementById('frm').submit();
-}
+	function writeFrm(home) {
+		document.getElementById('frm').action = home + "board_write";
+		document.getElementById('frm').submit();
+	}
 //-->
 </script>
 <form id='frm' action="${home }detailRead">
-<input type="hidden" name="writeNo" id="writeNo">
+	<input type="hidden" name="writeNo" id="writeNo">
 
-	
-<table class="mainTable">
-	<thead>
-		<tr class="textSize">
-			<th class="title_td">제 목</th>
-			<th>작성자</th>
-			<th>작성일</th>
-			<th>조회수</th>
-		</tr>
-	</thead>
-	<c:forEach var="freeboard" items="${boardLst }">
-	<tr>
-		<td colspan="4"><hr></td>
-	</tr>
-	<tr class="board_title">
-		<td>
-			<div class="title" onclick="detailView('${freeboard.no}')">${freeboard.title }</div>
-		</td>
-		<td>${freeboard.nickname }</td>
-		<td>${freeboard.write_date }</td>
-		<td>${freeboard.hit }</td>
-	</tr>
-	<tr>
-		<td colspan="4"><hr></td>
-	</tr> 
-	 </c:forEach>
-</table>
-<c:if test='${pathpath eq "board/selectBoard"}'>
-	<div class="boardOption">
-		<input class="wbutton" type="button" onclick="writeFrm('${home }')" value='글쓰기' />
-	</div>
-</c:if>
-${navi }
+
+	<table class="mainTable">
+		<thead>
+			<tr class="textSize">
+				<th class="title_td">제 목</th>
+				<th>작성자</th>
+				<th>작성일</th>
+				<th>조회수</th>
+			</tr>
+		</thead>
+		<c:forEach var="freeboard" items="${boardLst }">
+			<tr>
+				<td colspan="4"><hr></td>
+			</tr>
+			<tr class="board_title">
+				<td>
+					<div class="title" onclick="detailView('${freeboard.no}')">${freeboard.title }</div>
+				</td>
+				<td>${freeboard.nickname }</td>
+				<td>${freeboard.write_date }</td>
+				<td>${freeboard.hit }</td>
+			</tr>
+			<tr>
+				<td colspan="4"><hr></td>
+			</tr>
+		</c:forEach>
+	</table>
+	<c:if test='${pathpath eq "board/selectBoard"}'>
+		<div class="boardOption">
+			<input class="wbutton" type="button" onclick="writeFrm('${home }')"
+				value='글쓰기' />
+		</div>
+		<div class="brdnavi">${navi }</div>
+	</c:if>
+
 </form>

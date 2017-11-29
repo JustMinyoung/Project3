@@ -1,10 +1,6 @@
 package com.care.project3.Controller;
 
-import java.util.HashMap;
-import java.util.Map;
-
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import org.slf4j.Logger;
@@ -13,12 +9,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.SessionAttributes;
+import org.springframework.web.bind.support.SessionStatus;
 
-import com.care.project3.DTO.Login;
 import com.care.project3.DTO.Member;
 import com.care.project3.IService.MemberService;
 
@@ -27,48 +21,42 @@ import com.care.project3.IService.MemberService;
  */
 @RequestMapping("member")
 @Controller
+@SessionAttributes("membersession")
 
-//@SessionAttributes("sessionInfo")
 public class MemberController {
 	final String EXISTED = "<script>alert('중복된 이메일 입니다.');</script>";
 	@Autowired
 	private MemberService memberSer;
 
 	private static final Logger logger = LoggerFactory.getLogger(MemberController.class);
-	
+
 	@RequestMapping("memberProc")
-	public String memberProc(
-			Member member,
-			Model model,
-			//@ModelAttribute("sessionInfo")
-			Map<String, Object> sInfo) {
-		if(memberSer.memberProc(member,sInfo)){
-			model.addAttribute("member", member);
+	public String memberProc(Member member, Model model) {
+		if (memberSer.memberProc(member, model)) {
 			return "forward:/home";
-		} else { 
+		} else {
 			model.addAttribute("msg", EXISTED);
 			return "forward:/join_form";
 		}
 	}
-	
+
 	@RequestMapping("loginProc")
-	public String loginProc(Model model, Member member, HttpSession session) {
-		if (memberSer.loginProc(member)) {
-			session.setAttribute("member", member);
-			return "redirect:/home";
+	public String loginProc(Model model, Member member) {
+		if (memberSer.loginProc(member, model)) {
+			return "forward:/home"; // sucess.
+
 		} else {
 			model.addAttribute("msg", "login_failed");
 			return "redirect:/home";
+
 		}
 	}
 
 	@RequestMapping("logout")
-	public String logout(HttpSession session, HttpServletRequest request) {
-
-		session = request.getSession(false);
-		request.getSession(true).invalidate();
-
+	public String logout(SessionStatus sessionStatus) {
+		
+		sessionStatus.setComplete();
+		
 		return "redirect:/home";
 	}
-
 }

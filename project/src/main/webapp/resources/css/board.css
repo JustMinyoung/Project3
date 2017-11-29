@@ -25,13 +25,6 @@
 	align: center
 }
 
-body {
-	font-family: '나눔바른고딕', 'NanumBarunGothic';
-	color: #444;
-	font-size: 12px;
-	background: #f5f5f5;
-}
-
 .searchBtn {
 	height: 34px;
 	width: 38px;
@@ -91,6 +84,10 @@ body {
 	margin: 10px;
 	padding: 10px;
 }
+.bvb_title p{
+	font-size:20px;
+	font-weight:bold;
+}
 
 .bvb_info {
 	margin: 10px;
@@ -101,12 +98,13 @@ body {
 }
 
 .bvb_info p {
-	
+
 }
 
 .bvb_contents {
 	margin: 20px;
 	padding: 10px;
+	min-height: 400px;
 }
 
 .bvb_contents p {
@@ -278,4 +276,8 @@ p {
 	text-align: right;
 	padding: 10px 0;
 	background-color: black;
+}
+.brdnavi{
+	text-align:center;
+	padding:10px 0;
 }

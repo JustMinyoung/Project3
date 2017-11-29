@@ -7,12 +7,12 @@
 		SELECT * FROM FREEBOARD
 		WHERE NO=#{no}
 	</select>
-	
-	<select id="selectBoard" parameterType="Map" resultType="com.care.project3.DTO.FreeBoard">
-		select * from FREEBOARD ORDER BY 1 DESC
 
+	<select id="selectBoard" parameterType="Map"
+		resultType="com.care.project3.DTO.FreeBoard">
+		select * from FREEBOARD ORDER BY 1 DESC
 	</select>
-	
+
 	<select id="selectBoardCnt" parameterType="Map" resultType="int">
 		SELECT COUNT(*) FROM FREEBOARD
 	</select>
