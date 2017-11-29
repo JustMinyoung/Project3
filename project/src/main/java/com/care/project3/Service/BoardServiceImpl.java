@@ -58,4 +58,9 @@ public class BoardServiceImpl implements BoardService {
 				);
 	}
 
+	@Override
+	public void writeProc(FreeBoard freeboard) {
+		 boardDao.writeProc(freeboard);		
+	}
+
 }

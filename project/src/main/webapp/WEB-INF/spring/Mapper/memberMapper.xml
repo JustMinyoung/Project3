@@ -19,23 +19,11 @@
 	
 	<select id="isExistId" resultType="int" 
 	parameterType="String">
-		select count(*)
-		from member
-		where email=#{email}
+		SELECT COUNT(*)
+		FROM MEMBER
+		WHERE EMAIL=#{email}
 	</select>
 	
 </mapper>
-
-
-
-
-
-
-
-
-
-
-
-
 
 

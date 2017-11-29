@@ -2,6 +2,8 @@ package com.care.project3.Service;
 
 import java.util.Map;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -19,10 +21,8 @@ public class MemberServiceImpl implements MemberService {
 	final String EXISTID = "<script>alert(중복된 이메일 입니다.);</script>";
 	
 	@Override
-	public boolean memberProc(Member member, Map<String, Object> sInfo) {
-		String sId = (String)sInfo.get("checkedID");
-		
-		if(memberDao.isExistId(member.getEmail())==0 && member.getEmail().equals(sId)){
+	public boolean memberProc(Member member) {		
+		if(memberDao.isExistId(member.getEmail())==0){
 			memberDao.insertMember(member);
 			return true;
 		}
@@ -45,4 +45,5 @@ public class MemberServiceImpl implements MemberService {
 			return false;
 		return true;
 	}
+
 }

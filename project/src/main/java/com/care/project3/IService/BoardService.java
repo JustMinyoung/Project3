@@ -10,4 +10,5 @@ public interface BoardService {
 	public List<FreeBoard> selectBoard(String curPage, 
 			String searchOpt, String searchWord);
 	public String getNavi(String curPage, String searchOpt, String searchWord) throws Exception;
+	public void writeProc(FreeBoard freeboard);
 }

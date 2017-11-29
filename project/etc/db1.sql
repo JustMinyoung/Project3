@@ -141,3 +141,8 @@ VALUES
     select * from FREEBOARD
     
     select sequence_name from user_sequences
+    
+    
+    
+SELECT NICKNAME FROM MEMBER
+WHERE EMAIL='123123@123123.123'

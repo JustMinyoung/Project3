@@ -30,7 +30,7 @@ import com.care.project3.IService.MemberService;
 
 //@SessionAttributes("sessionInfo")
 public class MemberController {
-	final String EXISTED = "<script>alert('중복된 이메일 입니다.');</script>";
+	final String EXISTED = "<script>alert('잘못된 정보 입니다.');</script>";
 	@Autowired
 	private MemberService memberSer;
 
@@ -42,7 +42,7 @@ public class MemberController {
 			Model model,
 			//@ModelAttribute("sessionInfo")
 			Map<String, Object> sInfo) {
-		if(memberSer.memberProc(member,sInfo)){
+		if(memberSer.memberProc(member)){
 			model.addAttribute("member", member);
 			return "forward:/home";
 		} else { 
@@ -57,7 +57,7 @@ public class MemberController {
 			session.setAttribute("member", member);
 			return "redirect:/home";
 		} else {
-			model.addAttribute("msg", "login_failed");
+			model.addAttribute("msg", "EXISTED");
 			return "redirect:/home";
 		}
 	}
