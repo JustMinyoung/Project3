@@ -104,5 +104,14 @@ public class BoardController {
 		boardSer.writeProc(freeboard);
 		return "forward:/board/selectBoard";
 	}
+	
+	@RequestMapping("deleteBoard")
+	public String deleteBoard(
+			@RequestParam("no") int deleNo
+			) {
+		boardSer.deleteBoard(deleNo);
+		return "redirect:/board/selectBoard";
+	}
+
 
 }

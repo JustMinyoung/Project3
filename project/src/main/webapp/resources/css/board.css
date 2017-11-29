@@ -1,3 +1,59 @@
+tbody{
+	line-height: 210%;
+}
+
+.date_and_like div{
+	display: inline-block;
+	color: #999;
+}
+
+td{
+	border-bottom: 1px solid #f1f1f1;
+}
+
+.boardMainfont{
+	font-size: 27px;
+	font-weight: bold;
+}
+
+.All_Record{
+	font-size: 18px;
+	color: #999;
+}
+
+.Men_Record div{
+	margin-right: 22;
+	font-size: 18px;
+	display: inline-block;
+	color: #999;
+}
+
+.Women_Record div{
+	margin-right: 22;
+	font-size: 18px;
+	display: inline-block;
+	color: #999;
+}
+
+.schedule_date{
+	font-size: 18px;
+	text-align: center;
+	padding: 8px;
+	background: linear-gradient(#000000, #ff0000);
+	color: white;
+}
+
+.schedule_date i{
+	position: relative;
+    top: 1px;
+    color: #fff;
+    font-size: 15px
+}
+
+div.schedule_date div{
+	display: inline-block;
+}
+
 .title {
 	cursor: pointer;
 	text-align: left;
@@ -23,6 +79,13 @@
 	background: #000000;
 	border: 1px solid #ffffff;
 	align: center
+}
+
+body {
+	font-family: '나눔바른고딕', 'NanumBarunGothic';
+	color: #444;
+	font-size: 12px;
+	background: #f5f5f5;
 }
 
 .searchBtn {
@@ -84,10 +147,6 @@
 	margin: 10px;
 	padding: 10px;
 }
-.bvb_title p{
-	font-size:20px;
-	font-weight:bold;
-}
 
 .bvb_info {
 	margin: 10px;
@@ -98,13 +157,12 @@
 }
 
 .bvb_info p {
-
+	
 }
 
 .bvb_contents {
 	margin: 20px;
 	padding: 10px;
-	min-height: 400px;
 }
 
 .bvb_contents p {
@@ -162,11 +220,14 @@ p {
 .gallery {
 	width: 100%;
 	padding: 8px;
-	border: 1px solid #fff;
+	box-shadow: 0 0 5px rgba(0,0,0,.2);
+	background: #fffdfd;
+	border-top: 13px solid #000000;
 }
 
 .gallery tr td:first-child {
-	width: 220px;
+	width: 145px;
+	height: 145px;
 }
 
 .gallery td {
@@ -184,6 +245,7 @@ p {
 }
 
 .gallery_brd_title {
+	color: black;
 	font-size: 16px;
 	font-weight: bold;
 	line-height: 20px;
@@ -198,7 +260,17 @@ p {
 }
 
 .gallery_brd_date {
-	color: #999;
+	float: right;
+}
+
+.gallery_brd_hit {
+	float: left;
+    margin-right: 15px;
+}
+
+.gallery_brd_like {
+    float: left;
+    margin-right: 15px;
 }
 
 .rank_table {
@@ -208,10 +280,11 @@ p {
 	text-align: center;
 	vertical-align: middle;
 	padding-bottom: 5px;
+	box-shadow: 0 0 5px rgba(0,0,0,.2);
 }
 
 .rank_table thead {
-	background-color: black;
+	background: linear-gradient(#000000, #ff0000);
 	color: white;
 	padding: 5px;
 }
@@ -239,7 +312,7 @@ p {
 	line-height: 100px;
 }
 
-.rank_table .imgbox {
+.imgbox {
 	display: inline-flex;
 	width: 90px;
 	height: 90px;
@@ -256,17 +329,40 @@ p {
 .schedule_table {
 	border: 1px solid #ccc;
 	border-collapse: collapse;
+	box-shadow: 0 0 5px rgba(0,0,0,.2);
+	background: white;
 	width: 1020px;
 	font-size: 18px;
 }
 
 .schedule_table td {
-	border: 1px solid #ccc;
-	padding: 20px;
+	padding: 7px;
+	text-align: center;
 }
 
 .schedule_table td:first-child {
-	width: 200px;
+	width: 125px;
+	font-size: 12px;
+	text-align: center;
+}
+
+.schedule_table td:first-child+td {
+	line-height: 100px;
+	text-align: right;
+}
+
+.schedule_table td:first-child+td+td {
+	width: 100px;
+	text-align: center;
+}
+
+.schedule_table td:first-child+td+td+td {
+	line-height: 100px;
+	text-align: left;
+}
+
+.schedule_table td:last-child {
+	width: 125px;
 	text-align: center;
 }
 .boardOption .wbutton{
@@ -277,7 +373,8 @@ p {
 	padding: 10px 0;
 	background-color: black;
 }
-.brdnavi{
-	text-align:center;
-	padding:10px 0;
+
+.date_and_like div{
+	display: inline-block;
+	color: #999;
 }

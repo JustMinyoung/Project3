@@ -11,4 +11,5 @@ public interface BoardDao {
 	public List<FreeBoard> selectBoard(Map<String, Object> map);
 	public int selectBoardCnt(Map<String, String> map);
 	public void writeProc(FreeBoard freeboard);
+	public void deleteBoard(int no);
 }

@@ -62,5 +62,9 @@ public class BoardServiceImpl implements BoardService {
 	public void writeProc(FreeBoard freeboard) {
 		 boardDao.writeProc(freeboard);		
 	}
+	
+	public void deleteBoard(int deleNo){
+		boardDao.deleteBoard(deleNo);
+	}
 
 }

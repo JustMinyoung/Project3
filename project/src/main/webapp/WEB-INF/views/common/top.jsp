@@ -5,6 +5,7 @@
 <link href="${res }css/main.css" rel="stylesheet">
 <link href="${res }css/board.css" rel="stylesheet">
 <link href="${res }css/login.css" rel="stylesheet">
+<link href="${res }css/Rank.css" rel="stylesheet">
 <link href="${res }css/UFCMaina_Main.css" rel="stylesheet">
 <link href="${res }font-awesome/css/font-awesome.min.css" rel="stylesheet">
 <script src="${res }js/jquery-confirm.min.js"></script>

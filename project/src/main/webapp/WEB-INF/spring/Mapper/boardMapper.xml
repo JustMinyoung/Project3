@@ -33,8 +33,12 @@
 	<insert id="writeProc" parameterType="com.care.project3.DTO.FreeBoard">
 		INSERT INTO FREEBOARD
 		(NO, NICKNAME, TITLE, CONTENTS, WRITE_DATE)
-			VALUES (FREEBOARD_SEQ.NEXTVAL, '닉네임이다!', #{title}, #{contents}, sysdate)
+			VALUES (FREEBOARD_SEQ.NEXTVAL, #{nickname}, #{title}, #{contents}, sysdate)
 	</insert>
+	
+	<delete id="deleteBoard" parameterType="int">
+		DELETE FROM FREEBOARD WHERE NO=#{no}
+	</delete>
 </mapper>
 
 

@@ -1,8 +1,6 @@
 package com.care.project3.IService;
 
 import java.util.List;
-import java.util.Map;
-
 import com.care.project3.DTO.FreeBoard;
 
 public interface BoardService {
@@ -11,4 +9,5 @@ public interface BoardService {
 			String searchOpt, String searchWord);
 	public String getNavi(String curPage, String searchOpt, String searchWord) throws Exception;
 	public void writeProc(FreeBoard freeboard);
+	public void deleteBoard(int deleNo);
 }
