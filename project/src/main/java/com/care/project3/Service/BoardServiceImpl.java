@@ -16,7 +16,7 @@ public class BoardServiceImpl implements BoardService {
 	@Autowired
 	private BoardDao boardDao;
 	
-	private final int BLOCKSIZE = 2;
+	private final int BLOCKSIZE = 5;
 	private final String NAVIURL="/project3/board/selectBoard";
 	private final String CURRENTPAGE = "curPage=";
 	private final String SEARCHOPT = "searchOpt=";
@@ -33,7 +33,7 @@ public class BoardServiceImpl implements BoardService {
 		Map<String, Object> map = new HashMap<String, Object>();
 		int pageNum=0;
 		if(curPage!=null)
-			pageNum = Integer.parseInt(curPage)-1;
+		pageNum = Integer.parseInt(curPage)-1;
 		map.put("start", pageNum * BLOCKSIZE);
 		map.put("end", (pageNum+1) * BLOCKSIZE);
 		map.put("searchOpt", searchOpt);
