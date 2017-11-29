@@ -5,7 +5,8 @@
 <c:url var='res' value="/resources/" />
 <link href="${res }css/UFCMaina_Main.css" rel="stylesheet">
 <!DOCTYPE html>
-<form action="${home }member/loginProc" method="post">
+
+<form action="${home }member/loginProc" method="post" >
 <div class="modal-body">
 	<div class="form-group md_email">
 		<div class="ufc_label email">

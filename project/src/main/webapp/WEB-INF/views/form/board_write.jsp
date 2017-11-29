@@ -10,29 +10,27 @@
 <!-- include summernote css/js-->
 <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.8/summernote.css" rel="stylesheet">
 <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.8/summernote.js"></script>
+
 <form action="${home }board/writeProc" method="post">
 	<div class="board_box">
 		<div>
 			<div class="bvb_title">
-				<input type="text" id="title" class="text_title" />
+				<input type="text" name="title" id="title" class="text_title" value="${freeboard.title }"/>
 			</div>
 			<div class="bvb_info_hidden">
-				<input type="hidden" id="writer" class="hidden_writer" /> <input
-					type="hidden" id="write_date" class="hidden_date" />
+				<input type="hidden" name="nickname" id="writer" class="hidden_writer" value="" />
+				 <%-- <input	type="hidden" name="write_date" id="write_date" class="hidden_date" value="${freeboard.write_date }" /> --%>
 			</div>
 		</div>
 		<div class="bvb_contents_write">
-			<div id="summernote">
-				<p id="content">Hello</p>
+			<div>
+				<textarea name="contents" id="summernote">${freeboard.contents }</textarea>
 			</div>
 			<script>
 				$('#summernote').summernote({
 					height : 300
 				});
 			</script>
-		</div>
-		<div>
-		<input type="file" id="upload_file"/>
 		</div>
 		<div class="bvb_button_boxtest">
 			<button type="submit">글쓰기</button>

@@ -17,12 +17,11 @@
 		WHERE EMAIL=#{email}
 		AND PASSWORD=#{password}
 	</select>
-
-	<select id="isExistId" resultType="int" parameterType="String">
-		select
-		count(*)
-		from member
-		where email=#{email}
+	<select id="isExistId" resultType="int" 
+	parameterType="String">
+		SELECT COUNT(*)
+		FROM MEMBER
+		WHERE EMAIL=#{email}
 	</select>
 
 	<select id="getInfo" parameterType="Map"
@@ -33,17 +32,5 @@
 	</select>
 
 </mapper>
-
-
-
-
-
-
-
-
-
-
-
-
 
 

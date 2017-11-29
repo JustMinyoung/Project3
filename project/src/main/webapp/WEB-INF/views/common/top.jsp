@@ -11,8 +11,7 @@
 <script src="${res }js/jquery.js"></script>
 <script src="${res }js/20171123.js"></script>
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script src="${res }js/bootstrap.min.js"></script>
 ${msg }
 <div class="service_box">

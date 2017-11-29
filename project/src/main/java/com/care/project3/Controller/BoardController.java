@@ -1,5 +1,7 @@
 package com.care.project3.Controller;
 
+import javax.servlet.http.HttpSession;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,6 +11,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
+import com.care.project3.DTO.FreeBoard;
+import com.care.project3.DTO.Member;
 import com.care.project3.IService.BoardService;
 
 /**
@@ -22,6 +26,8 @@ public class BoardController {
 	private BoardService boardSer;
 	
 	private static final Logger logger = LoggerFactory.getLogger(BoardController.class);
+
+	private static final Object FreeBoard = null;
 
 	@RequestMapping("board")
 	public String board() {
@@ -90,5 +96,13 @@ public class BoardController {
 		return "forward:/board";
 	}
 	
+	@RequestMapping("writeProc")
+	public String writeProc(
+			FreeBoard freeboard,
+			Member member,
+			Model model) {
+		boardSer.writeProc(freeboard);
+		return "forward:/board/selectBoard";
+	}
 
 }
