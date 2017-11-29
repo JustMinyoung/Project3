@@ -1,7 +1,5 @@
 package com.care.project3.Controller;
 
-import javax.servlet.http.HttpSession;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -104,5 +102,14 @@ public class BoardController {
 		boardSer.writeProc(freeboard);
 		return "forward:/board/selectBoard";
 	}
+	
+	@RequestMapping("deleteBoard")
+	public String deleteBoard(
+			@RequestParam("no") int deleNo
+			) {
+		boardSer.deleteBoard(deleNo);
+		return "redirect:/board/selectBoard";
+	}
+
 
 }

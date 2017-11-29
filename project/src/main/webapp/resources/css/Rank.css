@@ -1,0 +1,83 @@
+@CHARSET "EUC-KR";
+#wc-headers .wc-nav-row .cell{
+	color:#fff;
+	font-size:13px;
+	padding:7px 15px 3px;
+	float:left;
+	text-transform:uppercase;
+	height: 25px;
+	}
+#wc-headers .wc-nav-row .cell.nav-red{
+	padding-left:5px
+	}
+#wc-headers .wc-nav-row .cell a{
+	color:#fff;
+	font-size:13px;
+	text-decoration:none;
+	text-transform:uppercase
+	}
+#wc-headers .wc-nav-row .cell a:hover{
+	color:#444
+	}
+#wc-headers .nav-gray{
+	background:#a4a4a4;
+	background:-moz-linear-gradient(left,#7f7f7f 0,#a4a4a4 17%,#a4a4a4 100%);
+	background:-webkit-gradient(linear,left top,right top,color-stop(0,#7f7f7f),color-stop(17%,#a4a4a4),color-stop(100%,#a4a4a4));
+	background:-webkit-linear-gradient(left,#7f7f7f 0,#a4a4a4 17%,#a4a4a4 100%);
+	background:-o-linear-gradient(left,#7f7f7f 0,#a4a4a4 17%,#a4a4a4 100%);
+	background:-ms-linear-gradient(left,#7f7f7f 0,#a4a4a4 17%,#a4a4a4 100%);
+	background:linear-gradient(to right,#7f7f7f 0,#a4a4a4 17%,#a4a4a4 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#7f7f7f',endColorstr='#a4a4a4',GradientType=1);
+	margin-left:-5px
+	}
+#wc-headers .angle-box{
+	margin-top:5px;
+	}
+#wc-5.indent-fifth{
+	clear:left;margin-left:-25px
+}
+#wc-headers .nav-gray{
+	-webkit-transform:skew(-40deg);
+	transform:skew(-40deg)
+	}
+#wc-headers .wc-red{
+	border-top:25px solid #c10e1f
+	}
+#wc-headers .wc-angle{
+	height:0;
+	width:0;
+	border-right:12px solid transparent;
+	margin-left:-4px;
+	margin-top:5px;
+	position:absolute
+}
+#wc-headers .wc-nav-row.wc-pad{
+	padding-bottom:5px;
+}
+#wc-headers .wc-nav-row .wc-angle.last{
+	margin-left:0;
+	margin-top:5px
+}
+#wc-headers .nav-red{
+	background: #c10e1f;
+	font-weight:bold
+}
+#wc-headers .nav-gray .wc-label{
+	-webkit-transform:skew(40deg);
+	transform:skew(40deg)
+}
+#wc-headers .clearfix{
+	*zoom:1
+}
+#wc-headers .clearfix:before,#wc-headers .clearfix:after{
+	display:table;
+	content:"";
+	line-height:0
+}
+#wc-headers .clearfix:after{
+	clear:both
+}
+#wc-headers .wc-title-section,#wc-headers .wc-classes-section{
+	float:left
+}
+

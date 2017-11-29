@@ -6,23 +6,22 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <script type="text/javascript">
 <!--
-	function search(home) {
-		document.getElementById('frm').action = home + "selectBoard";
-		document.getElementById('frm').submit();
-	}
+function search(home){
+	document.getElementById('frm').action=home+"selectBoard";
+	document.getElementById('frm').submit();
+}
 
-	function detailView(no) {
-		document.getElementById('writeNo').value = no;
-		document.getElementById('frm').submit();
-	}
-
-	function writeFrm(home) {
-		document.getElementById('frm').action = home + "board_write";
-		document.getElementById('frm').submit();
+function detailView(no){
+	document.getElementById('writeNo').value=no;
+	document.getElementById('frm').submit();
+}
+function writeFrm(home) {
+	document.getElementById('frm').action = home + "board_write";
+	document.getElementById('frm').submit();
 	}
 //-->
 </script>
-<form id='frm' action="${home }detailRead">
+<form id='frm' action="${home }detailRead" method="post">
 	<input type="hidden" name="writeNo" id="writeNo">
 	<table class="mainTable">
 		<thead>

@@ -18,7 +18,8 @@
 				<input type="text" name="title" id="title" class="text_title" value="${freeboard.title }"/>
 			</div>
 			<div class="bvb_info_hidden">
-				<input type="hidden" name="nickname" id="writer" class="hidden_writer" value="" />
+				<input type="hidden" name="nickname" id="writer" class="hidden_writer" value="${membersession.nickname }" />
+				<input type="hidden" name="email" id="email" value="${membersession.email }" />
 				 <%-- <input	type="hidden" name="write_date" id="write_date" class="hidden_date" value="${freeboard.write_date }" /> --%>
 			</div>
 		</div>
