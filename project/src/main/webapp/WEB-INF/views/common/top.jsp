@@ -47,7 +47,7 @@ ${msg }
 
 		<ul class="gnb_nav_ul">
 			<li><a href="${home }board/news_board">최신소식</a></li>
-			<li><a href="${home }board/hi_board">하이라이트</a></li>
+			<li><a href="${home }board/selectHiBoard">하이라이트</a></li>
 			<li><a href="${home }board/schedule_form">일정/결과</a></li>
 			<li><a href="${home }board/rank_form">순위/기록</a></li>
 			<li><a href="${home }board/selectBoard">자유게시판</a></li>

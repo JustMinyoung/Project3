@@ -49,7 +49,11 @@ function writeFrm(home) {
 			</tr>
 		</c:forEach>
 	</table>
+<!-- 	세션정보가 있으면 글쓰기 버튼활성화.
+	자유게시판으로 링크를 타고들어가면 글쓰기버튼 활성화.  메인화면에는 글쓰기버튼 비활서화 -->
+	<c:if test='${membersession.nickname ne null }'>
 	<c:if test='${pathpath eq "board/selectBoard"}'>
+	
 		<div class="boardOption">
 			<input class="wbutton" type="button" onclick="writeFrm('${home }')"
 				value='글쓰기' />
@@ -63,6 +67,7 @@ function writeFrm(home) {
 				type="button" onclick="search('${home}')" name='searchBtn'
 				value='검색' /></td>
 		</tr>
+		</c:if>
 	</c:if>
 	<div class="brdnavi">${navi }</div>
 </form>

@@ -40,5 +40,19 @@
 			<td><div class="imgbox" style="background-image: url(../img/김동현.png);"></div>너</td>
 			<td>경기종료</td>
 		</tr>
+		<tr>
+			<td>19일 오전 11:00</td>
+			<td>나<div class="imgbox" style="background-image: url(../img/김동현.png);"></div></td>
+			<td>0:0</td>
+			<td><div class="imgbox" style="background-image: url(../img/김동현.png);"></div>너</td>
+			<td>경기종료</td>
+		</tr>
+		<tr>
+			<td>19일 오전 11:00</td>
+			<td>나<div class="imgbox" style="background-image: url(../img/김동현.png);"></div></td>
+			<td>0:0</td>
+			<td><div class="imgbox" style="background-image: url(../img/김동현.png);"></div>너</td>
+			<td>경기종료</td>
+		</tr>
 	</tbody>
 </table>

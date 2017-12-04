@@ -13,19 +13,19 @@ function deleteFrm(home){
 //-->
 </script>
 <form id='frm' action="${home }selectBoard" method="get">
-<input type="hidden" name="no" id="no" value="${boardInfo.no }"/>
+<input type="hidden" name="no" id="no" value="${hiInfo.no }"/>
 <div class="board_box">
 	<div>
 		<div class="bvb_title">
-			<p>${boardInfo.title }</p>
+			<p>${hiInfo.title }</p>
 		</div>
 		<div class="bvb_info">
-			<p>${boardInfo.nickname }</p>
-			<p>${boardInfo.write_date } / ${boardInfo.like } / ${boardInfo.hit }</p>
+			<p>${hiInfo.nickname }</p>
+			<p>${hiInfo.write_date } / ${hiInfo.like } / ${hiInfo.hit }</p>
 		</div>
 	</div>
 	<div class="bvb_contents">
-		${boardInfo.contents }
+		${hiInfo.contents }
 	</div>
 		<div class="boardOption">
 			<input class="wbutton" type="button" onclick="deleteFrm('deleteBoard')" value='삭제' />

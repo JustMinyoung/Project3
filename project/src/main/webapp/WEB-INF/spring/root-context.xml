@@ -32,6 +32,6 @@
 
 	
 		<context:property-placeholder location="/WEB-INF/spring/jdbc.properties"/>
-		<context:component-scan base-package="com.care.project3.ImageService" />
-		<context:component-scan base-package="com.care.project3.Service" />
+		<context:component-scan base-package="com.care.project3.*" />
+		<context:component-scan base-package="com.care.project3.*" />
 </beans>
