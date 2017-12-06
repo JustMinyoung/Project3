@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.care.project3.IDAO.BoardDao">
+	<sql id="conditional">
+		<where>
+			<choose>
+				<when test='searchOpt eq "id"'>
+					id like '%'||#{searchWord}||'%'
+				</when>
+				<when test='searchOpt eq "title"'>
+					title like '%'||#{searchWord}||'%'
+				</when>
+				<when test='searchOpt eq "all"'>
+					title like '%'||#{searchWord}||'%'
+					OR id like
+					'%'||#{searchWord}||'%'
+				</when>
+			</choose>
+		</where>
+	</sql>
+	<select id="detailRead" parameterType="int"
+		resultType="com.care.project3.DTO.FreeBoard">
+		SELECT * FROM FREEBOARD
+		WHERE NO=#{no}
+	</select>
+	<select id="selectBoard" parameterType="Map"
+		resultType="com.care.project3.DTO.FreeBoard">
+	SELECT * FROM (SELECT b.*, ROWNUM as RNUM FROM (SELECT * FROM FREEBOARD ORDER BY NO DESC) b)
+	WHERE RNUM <![CDATA[ > ]]> #{start} AND RNUM <![CDATA[ <= ]]> #{end}
+	</select>
+	
+		<select id="selectHiBoard" parameterType="Map"
+		resultType="com.care.project3.DTO.Highlight">
+	SELECT * FROM (SELECT b.*, ROWNUM as RNUM FROM (SELECT * FROM Highlight ORDER BY NO DESC) b)
+	WHERE RNUM <![CDATA[ > ]]> #{start} AND RNUM <![CDATA[ <= ]]> #{end}
+	</select>
+
+	<select id="selectBoardCnt" parameterType="Map" resultType="int">
+		SELECT COUNT(*) FROM FREEBOARD
+	</select>
+
+	<insert id="writeProc" parameterType="com.care.project3.DTO.FreeBoard">
+		INSERT INTO FREEBOARD
+		(NO, NICKNAME, TITLE, CONTENTS, WRITE_DATE)
+			VALUES (FREEBOARD_SEQ.NEXTVAL, #{nickname}, #{title}, #{contents}, sysdate)
+	</insert>
+	
+	<insert id="newsProc" parameterType="com.care.project3.DTO.News">
+		INSERT INTO NEWS
+		(NO, NICKNAME, TITLE, CONTENTS, WRITE_DATE)
+			VALUES (NEWS_SEQ.NEXTVAL, #{nickname}, #{title}, #{contents}, sysdate)
+	</insert>
+	
+	<insert id="hiProc" parameterType="com.care.project3.DTO.Highlight">
+		INSERT INTO HIGHLIGHT
+		(NO, NICKNAME, TITLE, CONTENTS, WRITE_DATE)
+			VALUES (HIGHLIGHT_SEQ.NEXTVAL, #{nickname}, #{title}, #{contents}, sysdate)
+	</insert>
+	
+	<delete id="deleteBoard" parameterType="int">
+		DELETE FROM FREEBOARD WHERE NO=#{no}
+	</delete>
+	
+	<select id="detailHiView" parameterType="int"
+		resultType="com.care.project3.DTO.Highlight">
+		SELECT * FROM HIGHLIGHT
+		WHERE NO=#{no}
+	</select>
+</mapper>
+
+
+	
+
+
+
+
+
+
+
+
+
+
+

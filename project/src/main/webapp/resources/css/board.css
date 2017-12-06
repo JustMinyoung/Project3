@@ -1,79 +1,380 @@
-<style>
-<!--
-.title{cursor: pointer; text-align: left;}
+tbody{
+	line-height: 210%;
+}
 
-.board_title{
+.date_and_like div{
+	display: inline-block;
+	color: #999;
+}
+
+td{
+	border-bottom: 1px solid #f1f1f1;
+}
+
+.boardMainfont{
+	font-size: 27px;
+	font-weight: bold;
+}
+
+.All_Record{
+	font-size: 18px;
+	color: #999;
+}
+
+.Men_Record div{
+	margin-right: 22;
+	font-size: 18px;
+	display: inline-block;
+	color: #999;
+}
+
+.Women_Record div{
+	margin-right: 22;
+	font-size: 18px;
+	display: inline-block;
+	color: #999;
+}
+
+.schedule_date{
+	font-size: 18px;
+	text-align: center;
+	padding: 8px;
+	background: linear-gradient(#000000, #ff0000);
+	color: white;
+}
+
+.schedule_date i{
+	position: relative;
+    top: 1px;
+    color: #fff;
+    font-size: 15px
+}
+
+div.schedule_date div{
+	display: inline-block;
+}
+
+.title {
+	cursor: pointer;
+	text-align: left;
+}
+
+.board_title {
 	font-size: 12px;
 	height: 40px;
 	line-height: 24px;
-    font-weight: normal;
-    text-align: center;
-    color: #999;
-    border: 1px solid #ffffff;
-	align: center
+	font-weight: normal;
+	text-align: center;
+	color: #999;
+	border: 1px solid #ffffff;
 }
-.textSize{
+
+.textSize {
 	font-size: 12px;
 	height: 40px;
 	line-height: 24px;
-    font-weight: normal;
-    text-align: center;
-    color: #fff;
-    background: #000000;
-    border: 1px solid #ffffff;
+	font-weight: normal;
+	text-align: center;
+	color: #fff;
+	background: #000000;
+	border: 1px solid #ffffff;
 	align: center
-
 }
 
-body{
-  font-family: '³ª´®¹Ù¸¥°íµñ';
-  color: #444;
-  font-size: 12px;
-  background: #f5f5f5;
-}
-.searchBtn{
-    height: 34px;
-    width: 38px;
-    color: #000 ;
-    line-height: 20px;
-    padding: 1px 6px;
-    background: #fff;
-    border: 1px solid #bdc3c7;
-    border-radius: 50%;
-    z-index: 1;
-}
-.boardFrom{
-    background: #fff;
-    min-height: 800px;
-    margin: 0 auto;
-    margin-top: 30px;
-    margin-bottom: 50px;
-}
-.mainTable{
-width: 100%;
+body {
+	font-family: 'ë‚˜ëˆ”ë°”ë¥¸ê³ ë”•', 'NanumBarunGothic';
+	color: #444;
+	font-size: 12px;
+	background: #f5f5f5;
 }
 
-.deleteButton{
-height: 35px;
-    width: 100px;
-    color: #fff;
-    background: #000000;
-    border: 1px solid #ffffff;
-    border-radius: 0;
-    cursor: pointer;
-    display: none;
-}	
-.Button{
-    height: 35px;
-    width: 100px;
-    color: #fff;
-    background: #000000;
-    border: 1px solid #ffffff;
-    border-radius: 0;
-    cursor: pointer;
+.searchBtn {
+	height: 34px;
+	width: 38px;
+	color: #000;
+	line-height: 20px;
+	padding: 1px 6px;
+	background: #fff;
+	border: 1px solid #bdc3c7;
+	border-radius: 50%;
+	z-index: 1;
 }
-.title_td{
-	width:60%;
+
+.boardFrom {
+	background: #fff;
+	min-height: 800px;
+	margin: 0 auto;
+	margin-top: 30px;
+	margin-bottom: 50px;
 }
--->
-</style>
+
+.mainTable {
+	width: 100%;
+}
+
+.deleteButton {
+	height: 35px;
+	width: 100px;
+	color: #fff;
+	background: #000000;
+	border: 1px solid #ffffff;
+	border-radius: 0;
+	cursor: pointer;
+	display: none;
+}
+
+.wbutton {
+	height: 35px;
+	width: 100px;
+	color: #fff;
+	background: #000000;
+	border: 1px solid #ffffff;
+	border-radius: 0;
+	cursor: pointer;
+}
+
+.title_td {
+	width: 60%;
+}
+
+.board_box {
+	width: 1020px;
+	box-sizing: border-box;
+	border: 1px solid #ccc;
+}
+
+.bvb_title {
+	margin: 10px;
+	padding: 10px;
+}
+
+.bvb_info {
+	margin: 10px;
+	padding: 10px;
+	border-color: #ccc;
+	border-width: 1px 0 1px 0;
+	border-style: solid;
+}
+
+.bvb_info p {
+	
+}
+
+.bvb_contents {
+	margin: 20px;
+	padding: 10px;
+}
+
+.bvb_contents p {
+	
+}
+
+p {
+	margin: 0;
+	padding: 0;
+}
+
+.board_box {
+	width: 1020px;
+	box-sizing: border-box;
+	border: 1px solid #ccc;
+}
+
+.bvb_title {
+	margin: 10px;
+	padding: 10px;
+}
+
+.bvb_info_hidden {
+	display: none;
+}
+
+.bvb_contents_write {
+	margin: 10px;
+	padding: 10px;
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	min-height: 200px;
+}
+
+.text_title {
+	width: 100%;
+}
+
+.bvb_button_box {
+	margin: 10px;
+	padding: 10px;
+}
+
+.ck-editor__editable p {
+	min-height: 200px;
+	padding: 10px 0 10px 0;
+	box-sizing: border-box;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.gallery {
+	width: 100%;
+	padding: 8px;
+	box-shadow: 0 0 5px rgba(0,0,0,.2);
+	background: #fffdfd;
+	border-top: 13px solid #000000;
+}
+
+.gallery tr td:first-child {
+	width: 145px;
+	height: 145px;
+}
+
+.gallery td {
+	vertical-align: top;
+	padding: 8px;
+}
+
+.gallery td img {
+	width: 220px;
+	border: 1px solid #ccc;
+}
+
+.gallery td p {
+	margin-bottom: 5px;
+}
+
+.gallery_brd_title {
+	color: black;
+	font-size: 16px;
+	font-weight: bold;
+	line-height: 20px;
+}
+
+.gallery_brd_desc {
+	line-height: 18px;
+	max-height: 54px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	color: #5e5e5e;
+}
+
+.gallery_brd_date {
+	float: right;
+}
+
+.gallery_brd_hit {
+	float: left;
+    margin-right: 15px;
+}
+
+.gallery_brd_like {
+    float: left;
+    margin-right: 15px;
+}
+
+.rank_table {
+	border: 1px solid #ccc;
+	border-spacing: 0;
+	width: 1020px;
+	text-align: center;
+	vertical-align: middle;
+	padding-bottom: 5px;
+	box-shadow: 0 0 5px rgba(0,0,0,.2);
+}
+
+.rank_table thead {
+	background: linear-gradient(#000000, #ff0000);
+	color: white;
+	padding: 5px;
+}
+
+.rank_table thead th {
+	padding: 5px;
+	font-size: 18px;
+	height: 40px;
+}
+
+.rank_table tbody {
+	background-color: white;
+	color: black;
+}
+
+.rank_table tbody td {
+	padding: 5px;
+	font-size: 18px;
+	height: 100px;
+}
+
+.rank_table tbody td.fighter_name {
+	width: 300px;
+	text-align: left;
+	line-height: 100px;
+}
+
+.imgbox {
+	display: inline-flex;
+	width: 90px;
+	height: 90px;
+	margin: 5px;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+	vertical-align: top;
+	border-radius: 50%;
+	background-repeat: no-repeat;
+	background-position: 50% 100%;
+	background-size: 150%;
+}
+
+.schedule_table {
+	border: 1px solid #ccc;
+	border-collapse: collapse;
+	box-shadow: 0 0 5px rgba(0,0,0,.2);
+	background: white;
+	width: 1020px;
+	font-size: 18px;
+}
+
+.schedule_table td {
+	padding: 7px;
+	text-align: center;
+}
+
+.schedule_table td:first-child {
+	width: 125px;
+	font-size: 12px;
+	text-align: center;
+}
+
+.schedule_table td:first-child+td {
+	line-height: 100px;
+	text-align: right;
+}
+
+.schedule_table td:first-child+td+td {
+	width: 100px;
+	text-align: center;
+}
+
+.schedule_table td:first-child+td+td+td {
+	line-height: 100px;
+	text-align: left;
+}
+
+.schedule_table td:last-child {
+	width: 125px;
+	text-align: center;
+}
+.boardOption .wbutton{
+	margin-right: 10px;
+}
+.boardOption {
+	text-align: right;
+	padding: 10px 0;
+	background-color: black;
+}
+
+.date_and_like div{
+	display: inline-block;
+	color: #999;
+}

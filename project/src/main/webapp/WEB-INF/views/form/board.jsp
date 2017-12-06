@@ -1,44 +1,73 @@
+<%@page import="org.eclipse.jdt.internal.compiler.ast.ReturnStatement"%>
+<%@page import="org.springframework.web.bind.annotation.RequestMapping"%>
 <%@ page contentType="text/html; charset=UTF-8"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="EUC-KR"%>
-<table class="mainTable">
-  <thead>
-  <tr class="textSize">
-    <th class="title_td">Á¦ ¸ñ</th>
-    <th>ÀÛ¼ºÀÚ</th>
-    <th>ÀÛ¼ºÀÏ</th>
-    <th>Á¶È¸¼ö</th>
-  </tr>
-  </thead>
-  <!--  <c:forEach>¹İº¹¹®À¸·Î tr ±ÛÀÇ °³¼ö ¸¸Å­ ÀÚµ¿ »ı¼º// -->
-<tr><td colspan="5"><hr></td></tr>
- <tr class="board_title">
-    <td>
-    <div class="title" onclick="">ÀÚÀ¯°Ô½ÃÆÇ ±Û1</div>
-    </td>
-    <td>±è´ë½Â</td>
-    <td>2017.11.02</td>
-    <td>55</td>
-  </tr>
-<tr><td colspan="5"><hr></td></tr>
- <tr class="board_title">
-    <td>
-    <div class="title" onclick="">ÀÚÀ¯°Ô½ÃÆÇ ±Û2</div>
-    </td>
-    <td>±è´ë½Â</td>
-    <td>2017.11.02</td>
-    <td>92</td>
-  </tr>
-<!--   </c:forEach> -->
-  <tr><td colspan=5><hr/></td></tr>
-  <tr class="textSize">
+	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<script type="text/javascript">
+<!--
+function search(home){
+	document.getElementById('frm').action=home+"selectBoard";
+	document.getElementById('frm').submit();
+}
 
-    <td colspan=3 align="right">
-
-
-      <input class="Button" type="button" onclick="" value='±Û¾²±â'/>
-
-    </td>
-  </tr>
-  <tr><td colspan=5><hr/></td></tr>
-</table>
+function detailView(no){
+	document.getElementById('writeNo').value=no;
+	document.getElementById('frm').submit();
+}
+function writeFrm(home) {
+	document.getElementById('frm').action = home + "board_write";
+	document.getElementById('frm').submit();
+	}
+//-->
+</script>
+<form id='frm' action="${home }detailRead" method="post">
+	<input type="hidden" name="writeNo" id="writeNo">
+	<table class="mainTable">
+		<thead>
+			<tr class="textSize">
+				<th class="title_td">ì œ ëª©</th>
+				<th>ì‘ì„±ì</th>
+				<th>ì‘ì„±ì¼</th>
+				<th>ì¡°íšŒìˆ˜</th>
+			</tr>
+		</thead>
+		<c:forEach var="freeboard" items="${boardLst }">
+			<tr>
+				<td colspan="4"><hr></td>
+			</tr>
+			<tr class="board_title">
+				<td>
+					<div class="title" onclick="detailView('${freeboard.no}')">${freeboard.title }</div>
+				</td>
+				<td>${freeboard.nickname }</td>
+				<td>${freeboard.write_date }</td>
+				<td>${freeboard.hit }</td>
+			</tr>
+			<tr>
+				<td colspan="4"><hr></td>
+			</tr>
+		</c:forEach>
+	</table>
+<!-- 	ì„¸ì…˜ì •ë³´ê°€ ìˆìœ¼ë©´ ê¸€ì“°ê¸° ë²„íŠ¼í™œì„±í™”.
+	ììœ ê²Œì‹œíŒìœ¼ë¡œ ë§í¬ë¥¼ íƒ€ê³ ë“¤ì–´ê°€ë©´ ê¸€ì“°ê¸°ë²„íŠ¼ í™œì„±í™”.  ë©”ì¸í™”ë©´ì—ëŠ” ê¸€ì“°ê¸°ë²„íŠ¼ ë¹„í™œì„œí™” -->
+	<c:if test='${membersession.nickname ne null }'>
+	<c:if test='${pathpath eq "board/selectBoard"}'>
+	
+		<div class="boardOption">
+			<input class="wbutton" type="button" onclick="writeFrm('${home }')"
+				value='ê¸€ì“°ê¸°' />
+		</div>
+		<tr>
+			<td><select name="selectOpt">
+					<option value="all">ì „ì²´</option>
+					<option value="title">ì œëª©</option>
+					<option value="id">ì‘ì„±ì</option>
+			</select> <input type=text name='searchWord' /> <input class="searchBtn"
+				type="button" onclick="search('${home}')" name='searchBtn'
+				value='ê²€ìƒ‰' /></td>
+		</tr>
+		</c:if>
+	</c:if>
+	<div class="brdnavi">${navi }</div>
+</form>

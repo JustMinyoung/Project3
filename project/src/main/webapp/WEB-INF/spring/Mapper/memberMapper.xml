@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.care.project3.IDAO.MemberDao">
+
+	<insert id="insertMember" parameterType="com.care.project3.DTO.Member">
+		INSERT INTO MEMBER
+		(NO,
+		EMAIL, PASSWORD, NICKNAME)
+		VALUES (Member_SEQ.NEXTVAL, #{email},
+		#{password}, #{nickname})
+	</insert>
+
+	<select id="loginProc" resultType="int" parameterType="com.care.project3.DTO.Member">
+		SELECT
+		COUNT(*)
+		FROM MEMBER
+		WHERE EMAIL=#{email}
+		AND PASSWORD=#{password}
+	</select>
+	<select id="isExistId" resultType="int" 
+	parameterType="String">
+		SELECT COUNT(*)
+		FROM MEMBER
+		WHERE EMAIL=#{email}
+	</select>
+
+	<select id="getInfo" parameterType="Map"
+		resultType="com.care.project3.DTO.Member">
+		select *
+		from member
+		where email=#{email}
+	</select>
+
+</mapper>
+
+
